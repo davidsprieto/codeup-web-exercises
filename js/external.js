@@ -31,6 +31,6 @@ alert("You can enroll in this class!");
 var moreThanTwoItems = 2;
 var offerNotExpired = true;
 var ifPremiumMember = true;
-var offerValid = offerNotExpired && (moreThanTwoItems > 2 || ifPremiumMember);
+var offerValid = offerNotExpired && (moreThanTwoItems >= 2 || ifPremiumMember);
 console.log("Is the offer valid: " + offerValid);
 alert("This product offer is valid!");
