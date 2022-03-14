@@ -8,14 +8,29 @@
  * Example
  * > sayHello("codeup") // returns "Hello, codeup!"
  */
+// Functions Exercises.
 
-var name = prompt("What is your name?")
 function sayHello(name){
     console.log("Hello, " + name + "!");
 }
+sayHello("David");
 
-alert("Hello, " + name + "!");
-sayHello(name);
+// It can be typed the previous way or this way:
+
+function sayHello(name){
+    return "Hello, " + name + "!"
+}
+console.log(sayHello("David"));
+
+// To have input from the user it can be type this way:
+
+// var name = prompt("What is your name?")
+// function sayHello(name){
+//     console.log("Hello, " + name + "!");
+// }
+//
+// alert("Hello, " + name + "!");
+// sayHello(name);
 
 /**
  * TODO:
@@ -24,6 +39,8 @@ sayHello(name);
  *
  * console.log 'helloMessage' to check your work
  */
+
+
 
 /**
  * TODO:
