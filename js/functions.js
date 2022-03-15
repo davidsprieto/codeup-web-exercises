@@ -10,10 +10,10 @@
  */
 // Functions Exercises.
 
-function sayHello(name){
-    console.log("Hello, " + name + "!");
-}
-sayHello("David");
+// function sayHello(name){
+//     console.log("Hello, " + name + "!");
+// }
+// sayHello("David");
 
 // It can be typed the previous way or this way:
 
@@ -22,15 +22,16 @@ function sayHello(name){
 }
 console.log(sayHello("David"));
 
-// To have input from the user it can be type this way:
-
+// To have input from the user it can be typed this way:
+//
 // var name = prompt("What is your name?")
 // function sayHello(name){
-//     console.log("Hello, " + name + "!");
+//     return "Hello, " + name + "!");
 // }
 //
+// console.log(sayHello(name));
 // alert("Hello, " + name + "!");
-// sayHello(name);
+
 
 /**
  * TODO:
@@ -40,7 +41,8 @@ console.log(sayHello("David"));
  * console.log 'helloMessage' to check your work
  */
 
-
+var helloMessage = sayHello("David");
+console.log(helloMessage);
 
 /**
  * TODO:
@@ -48,6 +50,9 @@ console.log(sayHello("David"));
  * variable to the 'sayHello' function. You should see the same output in the
  * console.
  */
+
+var myName = "David";
+console.log(sayHello(myName));
 
 // Don't modify the following line, it generates a random number between 1 and 3
 // and stores it in a variable named random
@@ -71,6 +76,13 @@ var random = Math.floor((Math.random() * 3) + 1);
  * number)
  */
 
+function isTwo(number){
+    return number === 2;
+}
+
+console.log(isTwo(random));
+
+
 /**
  * TODO:
  * Create a function named 'calculateTip' to calculate a tip on a bill at a
@@ -83,12 +95,25 @@ var random = Math.floor((Math.random() * 3) + 1);
  * > calculateTip(0.15, 33.42) // returns 5.013
  */
 
+function calculateTip(tip, total){
+    return tip * total;
+}
+
+console.log(calculateTip());
+
 /**
  * TODO:
  * Use prompt and alert in combination with your calculateTip function to
  * prompt the user for the bill total and a percentage they would like to tip,
  * then display the dollar amount they should tip
  */
+
+var tip = prompt("How much are you tipping?")
+var total = prompt("What is the total?")
+var tipTotal = tip * total;
+
+console.log(calculateTip());
+alert("Your total amount to tip is: $" + tipTotal + "!");
 
 /**
  * TODO:
