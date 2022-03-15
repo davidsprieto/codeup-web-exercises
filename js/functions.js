@@ -75,6 +75,7 @@ var random = Math.floor((Math.random() * 3) + 1);
  * different result everytime you refresh the page if you are using the random
  * number)
  */
+var random = Math.floor((Math.random() * 3) + 1);
 
 function isTwo(number){
     return number === 2;
@@ -99,7 +100,7 @@ function calculateTip(tip, total){
     return tip * total;
 }
 
-console.log(calculateTip());
+console.log(calculateTip(0.20, 20));
 
 /**
  * TODO:
@@ -108,11 +109,12 @@ console.log(calculateTip());
  * then display the dollar amount they should tip
  */
 
-var tip = prompt("How much are you tipping?")
-var total = prompt("What is the total?")
+var tip = prompt("How much are you tipping (in decimal form)?");
+var total = prompt("What is the total bill?");
 var tipTotal = tip * total;
 
-console.log(calculateTip());
+
+console.log(calculateTip(tip, total));
 alert("Your total amount to tip is: $" + tipTotal + "!");
 
 /**
@@ -129,3 +131,14 @@ alert("Your total amount to tip is: $" + tipTotal + "!");
  *
  * > applyDiscount(45.99, 0.12) // 40.4712
  */
+
+var originalPrice = prompt("What is the original price of the item?");
+var discountPercent = prompt("What is the discount (in decimal form)?");
+var discountPrice = originalPrice * discountPercent;
+
+function applyDiscount(originalPrice, discountPercent){
+    return originalPrice * discountPercent;
+}
+
+console.log(applyDiscount(originalPrice, discountPercent));
+alert("After the discount is applied, your total is $" + discountPrice + "!");
