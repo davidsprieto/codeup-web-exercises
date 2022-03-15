@@ -134,10 +134,10 @@ alert("Your total amount to tip is: $" + tipTotal + "!");
 
 var originalPrice = prompt("What is the original price of the item?");
 var discountPercent = prompt("What is the discount (in decimal form)?");
-var discountPrice = originalPrice * discountPercent;
+var discountPrice = originalPrice - (originalPrice * discountPercent);
 
 function applyDiscount(originalPrice, discountPercent){
-    return originalPrice * discountPercent;
+    return originalPrice - (originalPrice * discountPercent);
 }
 
 console.log(applyDiscount(originalPrice, discountPercent));
