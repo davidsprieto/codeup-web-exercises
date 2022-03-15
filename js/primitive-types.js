@@ -1,4 +1,5 @@
 // Notes: Primitive Types Exercises.
+
 console.log("99.9 is a number.");
 console.log("'false' is a string.");
 console.log("false is a boolean.");
