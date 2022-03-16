@@ -18,7 +18,7 @@
 // It can be typed the previous way or this way:
 
 function sayHello(name){
-    return "Hello, " + name + "!"
+    return "Hello, " + name + "!";
 }
 console.log(sayHello("David"));
 
@@ -109,12 +109,12 @@ console.log(calculateTip(0.20, 20));
  * then display the dollar amount they should tip
  */
 
-var tip = prompt("How much are you tipping (in decimal form)?");
-var total = prompt("What is the total bill?");
-var tipTotal = tip * total;
+var tipAmount = Number(prompt("How much are you tipping (in decimal form)?"));
+var totalBill = Number(prompt("What is the total bill?"));
+var tipTotal = tipAmount * totalBill;
 
 
-console.log(calculateTip(tip, total));
+console.log(calculateTip(tipAmount, totalBill));
 alert("Your total amount to tip is: $" + tipTotal + "!");
 
 /**
@@ -132,8 +132,8 @@ alert("Your total amount to tip is: $" + tipTotal + "!");
  * > applyDiscount(45.99, 0.12) // 40.4712
  */
 
-var originalPrice = prompt("What is the original price of the item?");
-var discountPercent = prompt("What is the discount (in decimal form)?");
+var originalPrice = Number(prompt("What is the original price of the item?"));
+var discountPercent = Number(prompt("What is the discount (in decimal form)?"));
 var discountPrice = originalPrice - (originalPrice * discountPercent);
 
 function applyDiscount(originalPrice, discountPercent){
