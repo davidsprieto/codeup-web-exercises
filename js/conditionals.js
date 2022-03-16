@@ -120,7 +120,7 @@ alert(analyzeColor(userColorInput));
  */
 function calculateTotal(luckyNumber, totalAmount){
     if (luckyNumber === 0){
-        return totalAmount;
+        return totalAmount + " - Sorry, you don't get a discount";
     } else if (luckyNumber === 1){
         return totalAmount - (.10 * totalAmount);
     } else if (luckyNumber === 2){
@@ -130,13 +130,13 @@ function calculateTotal(luckyNumber, totalAmount){
     } else if (luckyNumber === 4){
         return totalAmount - (.50 * totalAmount);
     } else if (luckyNumber === 5){
-        return totalAmount * 0;
+        return (totalAmount - totalAmount) + " - You get everything for free";
     } else {
         return "Sorry, that's not a lucky number!"
     }
 }
 
-console.log(calculateTotal(6, 200));
+console.log(calculateTotal(5, 100));
 
 /**
  * TODO:
@@ -152,7 +152,7 @@ var luckyNumber = Math.floor(Math.random() * 6);
 var userTotalBill = Number(prompt("What is the price of your total bill?"));
 alert("Your lucky number is " + luckyNumber + "!");
 alert("Your total bill before the discount is: $" + userTotalBill + "!");
-alert("Your total after the discount is: $" + calculateTotal(luckyNumber, userTotalBill));
+alert("Your total after the discount is: $" + calculateTotal(luckyNumber, userTotalBill) + "!");
 
 /**
  * TODO:
@@ -172,3 +172,5 @@ alert("Your total after the discount is: $" + calculateTotal(luckyNumber, userTo
  * Can you refactor your code to use functions?
  * HINT: The way we prompt for a value could be improved
  */
+
+confirm("Would you like to enter a number?");
