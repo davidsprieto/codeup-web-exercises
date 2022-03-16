@@ -21,8 +21,30 @@
  * Test your function by passing various string literals to it and
  * console.logging the function's return value
  */
+// Functions Exercises:
 
+function analyzeColor(input) {
+    if (input === "blue" || input === "Blue") {
+        return "Blueberries are blue.";
+    }
+    else if (input === "red" || input === "Red") {
+        return "Raspberries are red.";
+    }
+    else if (input === "green" || input === "Green") {
+        return "Kiwis are green.";
+    }
+    else if (input === "yellow" || input === "Yellow") {
+        return "Bananas are yellow.";
+    }
+    else if (input === "orange" || input === "Orange") {
+        return "Mandarins are orange.";
+    }
+    else {
+        return "I don't know anything about " + input + "!";
+    }
+}
 
+console.log(analyzeColor("blue"));
 
 // Don't change the next two lines!
 // These lines create two variables for you:
@@ -36,11 +58,34 @@ var randomColor = colors[Math.floor(Math.random() * colors.length)];
  * Pass the `randomColor` variable to your 'analyzeColor' function and console.log the results.
  * You should see a different message every time you refresh the page
  */
+console.log(analyzeColor(randomColor));
 
 /**
  * TODO:
  * Comment out the code above, and refactor your function to use a switch-case statement
  */
+var analyzeColorAgain = "blue";
+
+switch(analyzeColorAgain) {
+    case "blue":
+        console.log("Blueberries are blue.");
+        break;
+    case "red":
+        console.log("Raspberries are red.");
+        break;
+    case "green":
+        console.log("Kiwis are green.");
+        break;
+    case "yellow":
+        console.log("Bananas are yellow.");
+        break;
+    case "orange":
+        console.log("Mandarins are orange.");
+        break;
+    default:
+        console.log("I don't know anything about " + analyzeColorAgain + "!");
+        break;
+}
 
 /**
  * TODO:
@@ -48,6 +93,9 @@ var randomColor = colors[Math.floor(Math.random() * colors.length)];
  * user to your `analyzeColor` function. Alert the return value from your
  * function to show it to the user.
  */
+var userColorInput = prompt("Please choose a color from the rainbow.")
+console.log(analyzeColor(userColorInput));
+alert(analyzeColor(userColorInput));
 
 /* ########################################################################## */
 
@@ -70,6 +118,25 @@ var randomColor = colors[Math.floor(Math.random() * colors.length)];
  * Test your function by passing it various values and checking for the expected
  * return value.
  */
+function calculateTotal(luckyNumber, totalAmount){
+    if (luckyNumber === 0){
+        return totalAmount;
+    } else if (luckyNumber === 1){
+        return totalAmount - (.10 * totalAmount);
+    } else if (luckyNumber === 2){
+        return totalAmount - (.25 * totalAmount);
+    } else if (luckyNumber === 3){
+        return totalAmount - (.35 * totalAmount);
+    } else if (luckyNumber === 4){
+        return totalAmount - (.50 * totalAmount);
+    } else if (luckyNumber === 5){
+        return totalAmount * 0;
+    } else {
+        return "Sorry, that's not a lucky number!"
+    }
+}
+
+console.log(calculateTotal(6, 200));
 
 /**
  * TODO:
