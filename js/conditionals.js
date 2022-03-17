@@ -24,19 +24,19 @@
 // Functions Exercises:
 
 function analyzeColor(input) {
-    if (input === "blue" || input === "Blue") {
+    if (input === "blue" || input === "Blue"){
         return "Blueberries are blue.";
     }
-    else if (input === "red" || input === "Red") {
+    else if (input === "red" || input === "Red"){
         return "Raspberries are red.";
     }
-    else if (input === "green" || input === "Green") {
+    else if (input === "green" || input === "Green"){
         return "Kiwis are green.";
     }
-    else if (input === "yellow" || input === "Yellow") {
+    else if (input === "yellow" || input === "Yellow"){
         return "Bananas are yellow.";
     }
-    else if (input === "orange" || input === "Orange") {
+    else if (input === "orange" || input === "Orange"){
         return "Mandarins are orange.";
     }
     else {
@@ -172,5 +172,78 @@ alert("Your total after the discount is: $" + calculateTotal(luckyNumber, userTo
  * Can you refactor your code to use functions?
  * HINT: The way we prompt for a value could be improved
  */
+var enterNumber = confirm("Would you like to enter a number?");
 
-confirm("Would you like to enter a number?");
+if (enterNumber === true){
+    var userInputNumber = Number(prompt("Please enter a number:"));
+} else {
+    console.log("User didn't want to enter a number.");
+}
+
+function userEvenOrOddNumber(userNumber){
+    if (userNumber % 2 === 1){
+        return alert("That's an odd number.");
+    } else if (userNumber % 2 === 0){
+        return alert("That's an even number.");
+    } else {
+        alert("That's an incorrect input data type.");
+    }
+}
+console.log(userEvenOrOddNumber(userInputNumber));
+
+if (enterNumber === true && (userInputNumber >= 0 || userInputNumber <= 0)){
+    alert("That number is " + Number(userInputNumber + 100) + " if you add 100 to it!");
+} else {
+    console.log("Incorrect input data type.");
+}
+
+function userPositiveOrNegativeNumber(userNumber){
+    if (userNumber < 0){
+        return alert("That's a negative number.");
+    } else if (userNumber > 0){
+        return alert("That's a positive number.");
+    } else {
+        console.log("Incorrect input data type.");
+    }
+}
+console.log(userPositiveOrNegativeNumber(userInputNumber));
+
+
+// STARTING CODE - BEFORE SPLITTING THE FUNCTIONS IS BELOW:
+// NEEDED TO SPLIT THE FUNCTION INTO TWO SEPARATE FUNCTIONS AS THE CODE EXITS THE FUNCTION ONCE THE CONDITION IS MET!
+
+// var enterNumber = confirm("Would you like to enter a number?");
+//
+// if (enterNumber === true){
+//     var userInputNumber = Number(prompt("Please enter a number:"));
+// } else {
+//     console.log("User didn't want to enter a number.");
+// }
+//
+// function userRandomNumber(userNumber){
+//     if (userNumber % 2 === 1){
+//         return alert("That's an odd number.");
+//     }
+//     else if (userNumber % 2 === 0){
+//         return alert("That's an even number.");
+//     }
+//     else if (userNumber < 0){
+//         return alert("That's a negative number.");
+//     }
+//     else if (userNumber > 0){
+//         return alert("That's a positive number.");
+//     }
+//     else {
+//         alert("That's an incorrect input data type.");
+//     }
+// }
+//
+// console.log(userRandomNumber(userInputNumber));
+//
+// if (enterNumber === true && (userInputNumber >= 0 || userInputNumber <= 0)){
+//     alert("That number is " + Number(userInputNumber + 100) + " if you add 100 to it!");
+// } else {
+//     console.log("Incorrect input data type.");
+// }
+
+
