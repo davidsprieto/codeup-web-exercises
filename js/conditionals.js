@@ -44,7 +44,7 @@ function analyzeColor(input) {
     }
 }
 
-console.log(analyzeColor("blue"));
+console.log(analyzeColor("green"));
 
 // Don't change the next two lines!
 // These lines create two variables for you:
@@ -152,7 +152,7 @@ var luckyNumber = Math.floor(Math.random() * 6);
 var userTotalBill = Number(prompt("What is the price of your total bill?"));
 alert("Your lucky number is " + luckyNumber + "!");
 alert("Your total bill before the discount is: $" + userTotalBill + "!");
-alert("Your total after the discount is: $" + calculateTotal(luckyNumber, userTotalBill) + "!");
+alert("Your total after the discount is: $" + calculateTotal(luckyNumber,userTotalBill) + "!");
 
 /**
  * TODO:
@@ -191,11 +191,6 @@ function userEvenOrOddNumber(userNumber){
 }
 console.log(userEvenOrOddNumber(userInputNumber));
 
-if (enterNumber === true && (userInputNumber >= 0 || userInputNumber <= 0)){
-    alert("That number is " + Number(userInputNumber + 100) + " if you add 100 to it!");
-} else {
-    console.log("Incorrect input data type.");
-}
 
 function userPositiveOrNegativeNumber(userNumber){
     if (userNumber < 0){
@@ -207,6 +202,13 @@ function userPositiveOrNegativeNumber(userNumber){
     }
 }
 console.log(userPositiveOrNegativeNumber(userInputNumber));
+
+
+if (enterNumber === true && (userInputNumber >= 0 || userInputNumber <= 0)){
+    alert("That number is " + Number(userInputNumber + 100) + " if you add 100 to it!");
+} else {
+    console.log("Incorrect input data type.");
+}
 
 
 // STARTING CODE - BEFORE SPLITTING THE FUNCTIONS IS BELOW:
@@ -245,5 +247,3 @@ console.log(userPositiveOrNegativeNumber(userInputNumber));
 // } else {
 //     console.log("Incorrect input data type.");
 // }
-
-
