@@ -1,4 +1,4 @@
-// Break and Continue JS Loops Exercises:
+// Break and Continue JS Loops Exercise:
 
 // Exercise #2:
 // Beginning Code - 1st iteration of code to determine solution:
@@ -70,6 +70,7 @@
 //         break;
 //     }
 // }
+
 
 
 
