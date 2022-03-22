@@ -39,7 +39,7 @@
 //             if (i % 2 !== 1) {
 //                 continue;
 //             }
-//             console.log("Yikes skipping number: " + userRandomOddNumber + "Here is an odd number: " + i);
+//             console.log("Here is an odd number: " + i);
 //         }
 //     }
 // }
@@ -71,7 +71,12 @@
 //     }
 // }
 
+var userRandomOddNumber = Number(prompt("Please enter an odd number between 1 and 50:"))
 
-
-
-
+while (userRandomOddNumber < 1 || userRandomOddNumber >= 50 || userRandomOddNumber % 2 === 0) {
+    userRandomOddNumber = Number(prompt("Invalid input entered. Please enter an odd number between 1 and 50:"));
+    if (userRandomOddNumber >= 1 && userRandomOddNumber < 50 && userRandomOddNumber % 2 === 1) {
+        break;
+    }
+}
+console.log("The user's valid odd number between 1 and 50 is: " + userRandomOddNumber);
