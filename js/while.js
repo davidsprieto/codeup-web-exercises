@@ -17,3 +17,8 @@ while (a < 65536) {
     console.log(a);
     a = a * 2;
 }
+
+
+// Do While Loop JS Exercise:
+
+// Exercise #1:
