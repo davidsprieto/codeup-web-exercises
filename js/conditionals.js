@@ -174,16 +174,16 @@ alert("Your total after the discount is: $" + calculateTotal(luckyNumber,userTot
  */
 var enterNumber = confirm("Would you like to enter a number?");
 
-if (enterNumber === true){
+if (enterNumber === true) {
     var userInputNumber = Number(prompt("Please enter a number:"));
 } else {
     console.log("User didn't want to enter a number.");
 }
 
-function userEvenOrOddNumber(userNumber){
-    if (userNumber % 2 === 1){
+function userEvenOrOddNumber(userNumber) {
+    if (userNumber % 2 === 1) {
         return alert("That's an odd number.");
-    } else if (userNumber % 2 === 0){
+    } else if (userNumber % 2 === 0) {
         return alert("That's an even number.");
     } else {
         alert("That's an incorrect input data type.");
@@ -192,10 +192,10 @@ function userEvenOrOddNumber(userNumber){
 console.log(userEvenOrOddNumber(userInputNumber));
 
 
-function userPositiveOrNegativeNumber(userNumber){
-    if (userNumber < 0){
+function userPositiveOrNegativeNumber(userNumber) {
+    if (userNumber < 0) {
         return alert("That's a negative number.");
-    } else if (userNumber > 0){
+    } else if (userNumber > 0) {
         return alert("That's a positive number.");
     } else {
         console.log("Incorrect input data type.");
@@ -204,7 +204,7 @@ function userPositiveOrNegativeNumber(userNumber){
 console.log(userPositiveOrNegativeNumber(userInputNumber));
 
 
-if (enterNumber === true && (userInputNumber >= 0 || userInputNumber <= 0)){
+if (enterNumber === true && (userInputNumber >= 0 || userInputNumber <= 0)) {
     alert("That number is " + Number(userInputNumber + 100) + " if you add 100 to it!");
 } else {
     console.log("Incorrect input data type.");

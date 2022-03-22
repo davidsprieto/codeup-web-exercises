@@ -136,7 +136,7 @@ var originalPrice = Number(prompt("What is the original price of the item?"));
 var discountPercent = Number(prompt("What is the discount (in decimal form)?"));
 var discountPrice = originalPrice - (originalPrice * discountPercent);
 
-function applyDiscount(originalPrice, discountPercent){
+function applyDiscount(originalPrice, discountPercent) {
     return originalPrice - (originalPrice * discountPercent);
 }
 

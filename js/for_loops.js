@@ -3,7 +3,7 @@
 // Exercise #2:
 function showMultiplicationTable(numberToMultiply) {
     for (var i = 1; i <= 10; i++) {
-        console.log(numberToMultiply * i);
+        console.log(numberToMultiply.toString() + " * " + i.toString() + " = " + numberToMultiply * i);
     }
 }
 showMultiplicationTable(7);
