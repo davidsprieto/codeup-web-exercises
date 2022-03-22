@@ -74,7 +74,7 @@
 // Exercise #2 Solution:
 var userRandomOddNumber = Number(prompt("Please enter an odd number between 1 and 50:"))
 
-while (userRandomOddNumber < 1 || userRandomOddNumber >= 50 || userRandomOddNumber % 2 === 0) {
+while (userRandomOddNumber < 1 || userRandomOddNumber >= 50 || userRandomOddNumber % 2 === 0 || isNaN(userRandomOddNumber)) {
     userRandomOddNumber = Number(prompt("Invalid input entered. Please enter an odd number between 1 and 50:"));
     if (userRandomOddNumber >= 1 && userRandomOddNumber < 50 && userRandomOddNumber % 2 === 1) {
         break;
@@ -111,7 +111,7 @@ var userRandomNumber = Number(prompt("Please enter an odd number between 1 and 5
 
 console.log("The user entered number: " + userRandomNumber);
 
-while (userRandomNumber < 1 || userRandomNumber >= 50 || userRandomNumber % 2 === 0) {
+while (userRandomNumber < 1 || userRandomNumber >= 50 || userRandomNumber % 2 === 0 || isNaN(userRandomNumber)) {
     console.log("The user entered number: " + (userRandomNumber = Number(prompt("Invalid input entered. Please enter an odd number between 1 and 50:"))));
 }
 
