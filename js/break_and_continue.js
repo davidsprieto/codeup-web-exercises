@@ -1,7 +1,7 @@
 // Break and Continue JS Loops Exercise:
 
 // Exercise #2:
-// Beginning Code - 1st iteration of code to determine solution:
+// Beginning Code - 1st iteration of code to determine a solution:
 //
 // var userRandomNumber = Number(prompt("Please enter an odd number between 1 and 50:"));
 //
@@ -15,7 +15,7 @@
 //     }
 // }
 
-// 2nd iteration of code to determine solution:
+// 2nd iteration of code to determine a solution:
 // var userRandomNumber = Number(prompt("Please enter an odd number between 1 and 50:"));
 //
 // if (userRandomNumber >= 1 && userRandomNumber < 50 && userRandomNumber % 2 === 1) {
@@ -27,7 +27,7 @@
 //     }
 // }
 
-// 3rd iteration of code to determine solution:
+// 3rd iteration of code to determine a solution:
 // var userRandomOddNumber = Number(prompt("Please enter an odd number between 1 and 50:"));
 //
 // for (i = 1; i <= 50; i++) {
@@ -44,7 +44,7 @@
 //     }
 // }
 
-// 4th iteration of code to determine solution:
+// 4th iteration of code to determine a solution:
 // var userRandomOddNumber = Number(prompt("Please enter an odd number between 1 and 50:"));
 //
 // for (var i = 0; i < 50; i++) {
@@ -56,8 +56,8 @@
 //     }
 // }
 
-/* 5th iteration of code to determine solution. It works, but it doesn't follow the guidelines
-* for the exercise because it doesn't actually run the loop code.
+/* 5th iteration of code to determine a solution. It works, but it doesn't follow the guidelines
+* for the exercise because it doesn't actually run the loop code. The 'for loop' is unnecessary.
 */
 // var userRandomOddNumber = Number(prompt("Please enter an odd number between 1 and 50:"));
 //
@@ -71,6 +71,7 @@
 //     }
 // }
 
+// Exercise #2 Solution:
 var userRandomOddNumber = Number(prompt("Please enter an odd number between 1 and 50:"))
 
 while (userRandomOddNumber < 1 || userRandomOddNumber >= 50 || userRandomOddNumber % 2 === 0) {
@@ -80,3 +81,48 @@ while (userRandomOddNumber < 1 || userRandomOddNumber >= 50 || userRandomOddNumb
     }
 }
 console.log("The user's valid odd number between 1 and 50 is: " + userRandomOddNumber);
+
+
+// Exercise #3:
+// Beginning Code - 1st iteration of code to determine a solution:
+// var userOddNumber = Number(prompt("Please enter an odd number between 1 and 50:"))
+//
+// console.log("Random odd number to skip is: " + userOddNumber);
+//
+// if (userOddNumber >= 1 && userOddNumber < 50 && userOddNumber % 2 === 1) {
+//     for (var i = 1; i <= 50; i++) {
+//         if (i % 2 !== 1) {
+//             continue;
+//         }
+//         if (userOddNumber) {
+//             console.log("Yikes! Skipping number: " + userOddNumber);
+//         }
+//         else {
+//             console.log("Here is an odd number: " + i);
+//         }
+//         if (userOddNumber < 1 || userOddNumber >= 50 || userOddNumber % 2 === 0) {
+//             userOddNumber = Number(prompt("Invalid input entered. Please enter an odd number between 1 and 50:"));
+//         }
+//     }
+// }
+
+// Exercise #3 Solution:
+var userRandomNumber = Number(prompt("Please enter an odd number between 1 and 50:"));
+
+console.log("The user entered number: " + userRandomNumber);
+
+while (userRandomNumber < 1 || userRandomNumber >= 50 || userRandomNumber % 2 === 0) {
+    console.log("The user entered number: " + (userRandomNumber = Number(prompt("Invalid input entered. Please enter an odd number between 1 and 50:"))));
+}
+
+if (userRandomNumber >= 1 && userRandomNumber < 50 && userRandomNumber % 2 === 1) {
+    for (var i = 1; i < 50; i++) {
+        if (i % 2 === 0) {
+            continue;
+        } if (userRandomNumber === i) {
+            console.log("Yikes! Skipping number: " + i);
+        } else {
+            console.log("Here is an odd number: " + i);
+        }
+    }
+}
