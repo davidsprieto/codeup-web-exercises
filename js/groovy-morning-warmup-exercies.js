@@ -1,6 +1,6 @@
 // Exercise: Write a javascript function that accepts the 3 lengths of a triangle and outputs the triangle’s area.
 
-// Function for the area of a triangle when the base and the height are known:
+// 03/22/22 - Function for the area of a triangle when the base and the height are known:
 function triangleArea (b, h) {
     return (.5 * b * h);
 }
