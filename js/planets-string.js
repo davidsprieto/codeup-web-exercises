@@ -11,7 +11,8 @@
      * console.log planetsArray to check your work
      */
 
-    // console.log(planetsArray);
+    planetsArray = planetsString.split("|")
+    console.log(planetsArray);
 
     /**
      * TODO:
@@ -19,9 +20,15 @@
      * results. Why might this be useful?
      *
      * BONUS:
-     * Create another string that would display your planets in an undordered
+     * Create another string that would display your planets in an unordered
      * list. You will need an opening AND closing <ul> tags around the entire
      * string, and <li> tags around each planet.
      */
+
+    var planetsBrString = "Mercury<br>Venus<br>Earth<br>Mars<br>Jupiter<br>Saturn<br>Uranus<br>Neptune";
+    console.log(planetsBrString.split("<br>"));
+
+    var planetsList = "- Mercury\n- Venus\n- Earth\n- Mars\n- Jupiter\n- Saturn\n- Uranus\n- Neptune";
+    console.log(planetsList);
 
 })();
