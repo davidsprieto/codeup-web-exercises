@@ -20,4 +20,3 @@ function shuffleArray(input) {
     return input.sort(() => Math.random() - 0.5);
 }
 console.log(shuffleArray(numbersArray));
-
