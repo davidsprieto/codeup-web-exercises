@@ -12,3 +12,12 @@ function areaOfTriangle (a, b, c) {
     return ((a + b + c) / 2);
 }
 console.log(areaOfTriangle(2, 4, 5));
+
+// 03/25/22 - Write a function that takes in an array and returns the array in a random order:
+var numbersArray = [2, 4, 6, 8];
+
+function shuffleArray(input) {
+    return input.sort(() => Math.random() - 0.5);
+}
+console.log(shuffleArray(numbersArray));
+
