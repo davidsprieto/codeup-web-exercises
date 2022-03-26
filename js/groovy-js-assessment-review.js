@@ -6,8 +6,18 @@
 
 // ## Problems
 
-// 1. Create a function named `calcAge` that takes the age and return the age in days. If input is not numeric, calcAge should return false.
+// 1. Create a function named `calcAge` that takes the age and returns the age in days. If input is not numeric, calcAge should return false.
+var userAge = 28;
+console.log("User age is: " + userAge);
 
+function calcAge(input) {
+    if (typeof input == 'number') {
+        return console.log("User age in days is: " + (input * 365) + " days.");
+    } else {
+        return console.log(false);
+    }
+}
+calcAge(userAge);
 
 // 2. Create a function named `increment` that takes a number as an argument, increments the number by +1 and returns the result. If input is not numeric, increment should return false.
 
