@@ -23,6 +23,7 @@ console.log(shuffleArray(numbersArray));
 
 
 // 03/28/22 - Return a string in reverse:
+// Solution found on freecodecamp.org.
 function stringReverse(str) {
     var splitString = str.split("");
     var reverseArray = splitString.reverse();
@@ -33,6 +34,7 @@ console.log(stringReverse("hello"));
 
 
 // 03/28/22 - Return true if a string is a palindrome and false if it isn't. (A palindrome is a word that reads the same both forward and backward, example: racecar).
+// Solution found on freecodecamp.org
 function palindrome(str) {
     var re = /[\W_]/g;
     var lowRegStr = str.toLowerCase().replace(re, '');
