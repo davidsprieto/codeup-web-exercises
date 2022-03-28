@@ -32,6 +32,12 @@ function stringReverse(str) {
 }
 console.log(stringReverse("hello"));
 
+// Above solution can be rewritten as seen below to have all methods be performed on the input and stored in one variable.
+function stringReverse2(str) {
+    var reverseString = str.split("").reverse().join("");
+    return reverseString;
+}
+console.log(stringReverse2("hello"));
 
 // 03/28/22 - Return true if a string is a palindrome and false if it isn't. (A palindrome is a word that reads the same both forward and backward, example: racecar).
 // Solution found on freecodecamp.org
