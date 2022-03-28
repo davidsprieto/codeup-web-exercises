@@ -22,7 +22,7 @@ calcAge(userAge);
 // 2. Create a function named `increment` that takes a number as an argument, increments the number by +1 and returns the result. If input is not numeric, increment should return false.
 
 
-// 3. Define a function named `isOdd` that takes in a number, return true is that number is odd. Return false if the number is either not a number or even.
+// 3. Define a function named `isOdd` that takes in a number, return true if that number is odd. Return false if the number is either not a number or even.
 
 
 // 4. Write a function named `oddArr`. Given the array of var array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10] return the odd numbers.
@@ -35,4 +35,6 @@ calcAge(userAge);
 
 
 // 7. create a function named `reverse` that takes in and reverses an array.
+
+
 // # regulus-second-js-reassessment-review
