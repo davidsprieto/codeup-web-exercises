@@ -54,23 +54,45 @@
         {name: 'George', amount: 320, discount: "George spent more than $200, he also qualifies for the 12% discount. His total is: $281.60!"}
     ];
 
-    function shopperDiscount(input) {
-        if (input === 'Cameron') {
-            console.log("---- " + shoppers[0].name + " ----");
-            console.log("Cameron's amount before the discount is: $" + shoppers[0].amount);
-            console.log("Cameron didn't spend more than $200, she doesn't qualify for the discount. Her total amount is $" + shoppers[0].amount + ".");
-        } else if (input === 'Ryan') {
-            console.log("---- " + shoppers[1].name + " ----");
-            console.log("Ryan's amount before the discount is: $" + shoppers[1].amount);
-            console.log("Ryan spent more than $200, he does qualify for the 12% discount. His total amount after the discount is: $" + (shoppers[1].amount - (shoppers[1].amount * .12))  + "!");
-        } else if (input === 'George') {
-            console.log("---- " + shoppers[2].name + " ----");
-            console.log("George's amount before the discount is: $" + shoppers[2].amount);
-            console.log("George spent more than $200, he does qualify for the 12% discount. His total amount after the discount is: $" + (shoppers[2].amount - (shoppers[2].amount * .12)).toFixed(2)  + "!");
+    // // Function:
+    // function shopperDiscount(shopper) {
+    //     if (shopper === 'Cameron') {
+    //         console.log("---- " + shoppers[0].name + " ----");
+    //         console.log("Cameron's amount before the discount is: $" + shoppers[0].amount);
+    //         console.log("Cameron didn't spend more than $200, she doesn't qualify for the discount. Her total amount is $" + shoppers[0].amount + ".");
+    //     } else if (shopper === 'Ryan') {
+    //         console.log("---- " + shoppers[1].name + " ----");
+    //         console.log("Ryan's amount before the discount is: $" + shoppers[1].amount);
+    //         console.log("Ryan spent more than $200, he does qualify for the 12% discount. His total amount after the discount is: $" + (shoppers[1].amount - (shoppers[1].amount * .12))  + "!");
+    //     } else if (shopper === 'George') {
+    //         console.log("---- " + shoppers[2].name + " ----");
+    //         console.log("George's amount before the discount is: $" + shoppers[2].amount);
+    //         console.log("George spent more than $200, he does qualify for the 12% discount. His total amount after the discount is: $" + (shoppers[2].amount - (shoppers[2].amount * .12)).toFixed(2)  + "!");
+    //     }
+    // }
+    // shopperDiscount(shoppers[0].name);
+    //
+    // // For Each Loop:
+    // shoppers.forEach(function(shopper){
+    //     console.log("Shopper: ---- " + shopper.name + " ----");
+    //     console.log("Total before the discount: $" + shopper.amount);
+    //     console.log(shopper.discount);
+    // });
+
+    // Function refactored to pass in the entire object from the shoppers array and still have the expected results:
+    function shopperDiscount(shopper) {
+        if (shopper.amount < 200) {
+            console.log(shopper.name + " didn't spend more than $200. Therefore, " + shopper.name + " doesn't qualify for a discount.");
+            console.log(shopper.name + "'s" + " total amount remains the same of: $" + shopper.amount);
+        } else if (shopper.amount > 200) {
+            console.log(shopper.name + " spent more than $200. Therefore, " + shopper.name + " qualifies for a 12% discount!");
+            console.log(shopper.name + "'s" + " total before the discount is: $" + shopper.amount);
+            console.log(shopper.name + "'s" + " total after the discount is: $" + (shopper.amount - (shopper.amount * .12)).toFixed(2));
         }
     }
-    shopperDiscount(shoppers[0].name);
+    shopperDiscount(shoppers[0]);
 
+    // For Each Loop:
     shoppers.forEach(function(shopper){
         console.log("Shopper: ---- " + shopper.name + " ----");
         console.log("Total before the discount: $" + shopper.amount);
@@ -89,6 +111,46 @@
      * > console.log(books[0].author.firstName) // "Douglas"
      * > console.log(books[0].author.lastName) // "Adams"
      */
+
+    var books = [
+        {
+            title: "Can't Hurt Me",
+            author: {
+                firstName: "David",
+                lastName: "Goggins"
+            }
+        },
+        {
+            title: "Mindset",
+            author: {
+                firstName: "Carol",
+                lastName: "Dweck"
+            }
+        },
+        {
+            title: "Meditations",
+            author: {
+                firstName: "Marcus",
+                lastName: "Aurelius"
+            }
+        },
+        {
+            title: "Extreme Ownership",
+            author: {
+                firstName: "Jocko",
+                lastName: "Willink"
+            }
+        },
+        {
+            title: "Fearless",
+            author: {
+                firstName: "Eric",
+                lastName: "Blehm"
+            }
+        }
+    ];
+    console.log(books.length);
+    console.log(books[0].author.firstName);
 
 
 
@@ -117,6 +179,12 @@
      *      ...
      */
 
+    for (var i = 0; i < books.length; i++) {
+        console.log("Book #" + [i + 1] + ":");
+        console.log("Title: " + books[i].title);
+        console.log("Author: " + books[i].author.firstName + " " + books[i].author.lastName);
+    }
+
     /**
      * Bonus:
      * - Create a function named `createBook` that accepts a title and author
@@ -127,5 +195,7 @@
      *   outputs the information described above. Refactor your loop to use your
      *   `showBookInfo` function.
      */
+
+
 
 })();
