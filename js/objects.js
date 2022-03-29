@@ -49,9 +49,9 @@
      */
 
     var shoppers = [
-        {name: 'Cameron', amount: 180, discount: "Cameron didn't spend more than $200, she doesn't qualify for the 12% discount!"},
-        {name: 'Ryan', amount: 250, discount: "Ryan spent more than $200, he qualifies for the 12% discount. His total is: $220!"},
-        {name: 'George', amount: 320, discount: "George spent more than $200, he also qualifies for the 12% discount. His total is: $281.60!"}
+        {name: 'Cameron', amount: 180},
+        {name: 'Ryan', amount: 250},
+        {name: 'George', amount: 320}
     ];
 
     // // Function:
@@ -92,11 +92,16 @@
     }
     shopperDiscount(shoppers[0]);
 
+
     // For Each Loop:
     shoppers.forEach(function(shopper){
-        console.log("Shopper: ---- " + shopper.name + " ----");
-        console.log("Total before the discount: $" + shopper.amount);
-        console.log(shopper.discount);
+        console.log("Shopper: " + shopper.name);
+        if (shopper.amount < 200) {
+            console.log(shopper.name + " didn't spend enough money to qualify for the 12% discount. Therefore, total amount remains the same of: $" + shopper.amount);
+        } else if (shopper.amount > 200) {
+            console.log(shopper.name + " did spend enough money to qualify for the 12% discount. Their total before the discount is: $" + shopper.amount);
+            console.log("Their total after the discount is: $" + (shopper.amount - (shopper.amount * .12)).toFixed(2));
+        }
     });
 
     /** TODO:
@@ -112,6 +117,7 @@
      * > console.log(books[0].author.lastName) // "Adams"
      */
 
+    // Array of objects containing book information stored in 'books' variable:
     var books = [
         {
             title: "Can't Hurt Me",
@@ -179,6 +185,7 @@
      *      ...
      */
 
+    // For Loop to loop through book information:
     for (var i = 0; i < books.length; i++) {
         console.log("Book #" + [i + 1] + ":");
         console.log("Title: " + books[i].title);
@@ -196,6 +203,23 @@
      *   `showBookInfo` function.
      */
 
+    // createBook Function:
+    function createBook(title, authorFirst, authorLast) {
+        var bookCreation = {};
+        bookCreation.title = title;
+        bookCreation.author = {};
+        bookCreation.author.firstName = authorFirst;
+        bookCreation.author.lastName = authorLast;
+        return bookCreation;
+    }
+    console.log(createBook("Can't Hurt Me", "David", "Goggins"));
 
+
+    // showBookInfo Function:
+    function showBookInfo(object) {
+        console.log("Title: " + object.title);
+        console.log("Author: " + object.author.firstName + " " + object.author.lastName);
+    }
+    showBookInfo(books[0]);
 
 })();
