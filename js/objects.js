@@ -12,6 +12,13 @@
      *  > console.log(person.lastName) // "Sanchez"
      */
 
+    var person = {
+        firstName: "David",
+        lastName: "Prieto"
+    };
+    console.log(person.firstName);
+    console.log(person.lastName);
+
     /**
      * TODO:
      * Add a sayHello method to the person object that returns a greeting using
@@ -21,6 +28,11 @@
      * Example
      * > console.log(person.sayHello()) // "Hello from Rick Sanchez!"
      */
+
+    person.sayHello = function() {
+        return "Hello from " + person.firstName + " " + person.lastName + "!"
+    }
+    console.log(person.sayHello());
 
     /** TODO:
      * HEB has an offer for the shoppers that buy products amounting to
@@ -36,11 +48,34 @@
      * and console.log the relevant messages for each person
      */
 
-    // var shoppers = [
-    //     {name: 'Cameron', amount: 180},
-    //     {name: 'Ryan', amount: 250},
-    //     {name: 'George', amount: 320}
-    // ];
+    var shoppers = [
+        {name: 'Cameron', amount: 180, discount: "Cameron didn't spend more than $200, she doesn't qualify for the 12% discount!"},
+        {name: 'Ryan', amount: 250, discount: "Ryan spent more than $200, he qualifies for the 12% discount. His total is: $220!"},
+        {name: 'George', amount: 320, discount: "George spent more than $200, he also qualifies for the 12% discount. His total is: $281.60!"}
+    ];
+
+    function shopperDiscount(input) {
+        if (input === 'Cameron') {
+            console.log("---- " + shoppers[0].name + " ----");
+            console.log("Cameron's amount before the discount is: $" + shoppers[0].amount);
+            console.log("Cameron didn't spend more than $200, she doesn't qualify for the discount. Her total amount is $" + shoppers[0].amount + ".");
+        } else if (input === 'Ryan') {
+            console.log("---- " + shoppers[1].name + " ----");
+            console.log("Ryan's amount before the discount is: $" + shoppers[1].amount);
+            console.log("Ryan spent more than $200, he does qualify for the 12% discount. His total amount after the discount is: $" + (shoppers[1].amount - (shoppers[1].amount * .12))  + "!");
+        } else if (input === 'George') {
+            console.log("---- " + shoppers[2].name + " ----");
+            console.log("George's amount before the discount is: $" + shoppers[2].amount);
+            console.log("George spent more than $200, he does qualify for the 12% discount. His total amount after the discount is: $" + (shoppers[2].amount - (shoppers[2].amount * .12)).toFixed(2)  + "!");
+        }
+    }
+    shopperDiscount(shoppers[0].name);
+
+    shoppers.forEach(function(shopper){
+        console.log("Shopper: ---- " + shopper.name + " ----");
+        console.log("Total before the discount: $" + shopper.amount);
+        console.log(shopper.discount);
+    });
 
     /** TODO:
      * Create an array of objects that represent books and store it in a
@@ -54,6 +89,8 @@
      * > console.log(books[0].author.firstName) // "Douglas"
      * > console.log(books[0].author.lastName) // "Adams"
      */
+
+
 
     /**
      * TODO:
