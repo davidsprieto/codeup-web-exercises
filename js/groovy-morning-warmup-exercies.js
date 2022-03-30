@@ -48,3 +48,15 @@ function palindrome(str) {
     return reverseStr === lowRegStr;
 }
 palindrome("A man, a plan, a canal. Panama");
+
+// 03/30/22 - Write a function that filters out numbers from a list:
+// Example input: [3,g,s,5,j,8,2,d,6,h,9,l,5,s,2,3]
+// Expected Output: [g,s,j,d,h,l,s]
+
+var arrayOfCharacters = [3,"g","s",5,"j",8,2,"d",6,"h",9,"l",5,"s",2,3];
+
+function filterOutNumbers(array) {
+    return array.filter(value => typeof value === 'string');
+}
+
+console.log(filterOutNumbers(arrayOfCharacters));
