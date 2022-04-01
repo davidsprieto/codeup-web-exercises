@@ -1,3 +1,28 @@
 .fancy-header {
-    color:purple;
+    color: cornflowerblue;
+    text-align: center;
+}
+
+.intro {
+    text-align: center;
+}
+
+.h2-headers {
+    color: steelblue;
+    text-decoration: underline;
+}
+
+.image {
+    background-image: url("https://images.pexels.com/photos/42148/pexels-photo-42148.jpeg?auto=compress&cs=tinysrgb&w=1260&h=450&dpr=1");
+    background-repeat: no-repeat;
+    background-position: right;
+}
+
+body {
+    background-color: lightgray;
+    font-family: Helvetica;
+}
+
+ul {
+    list-style-type: square;
 }
