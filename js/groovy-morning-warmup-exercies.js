@@ -60,3 +60,26 @@ function filterOutNumbers(array) {
 }
 
 console.log(filterOutNumbers(arrayOfCharacters));
+
+// 04/01/22 - Write a function that returns the reading status of each of following books:
+
+var library = [
+    {
+        author: 'Bill Gates',
+        title: 'The Road Ahead',
+        readingStatus: true
+    },
+    {
+        author: 'Steve Jobs',
+        title: 'Walter Isaacson',
+        readingStatus: true
+    },
+    {
+        author: 'Suzanne Collins',
+        title:  'Mockingjay: The Final Book of The Hunger Games',
+        readingStatus: false
+    }];
+
+    library.forEach(function(library){
+        console.log("Author: " + library.author + ", Title: " + library.title + ", Are you still reading?: " + library.readingStatus);
+    })
