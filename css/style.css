@@ -7,11 +7,6 @@
     text-align: center;
 }
 
-.h2-headers {
-    color: steelblue;
-    text-decoration: underline;
-}
-
 .image {
     background-image: url("https://images.pexels.com/photos/42148/pexels-photo-42148.jpeg?auto=compress&cs=tinysrgb&w=1260&h=450&dpr=1");
     background-repeat: no-repeat;
@@ -21,8 +16,52 @@
 body {
     background-color: lightgray;
     font-family: Helvetica;
+    text-align: center;
+}
+
+.h2-headers {
+    color: steelblue;
+    text-decoration: underline;
+}
+
+.h2-align {
+    text-align: center;
+    margin-bottom: -5px;
+    margin-left: 15px;
 }
 
 ul {
     list-style-type: square;
+    text-align: left;
+    display: inline-block;
+}
+
+ol {
+    text-align: left;
+    display: inline-block;
+}
+
+.table-border, th, td, tr {
+    border: 1px solid;
+}
+
+.table-center {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+a:link {
+    color: firebrick;
+}
+
+a:visited {
+    color: midnightblue;
+}
+
+a:hover {
+    color: darkorange;
+}
+
+a:active {
+    color: darkgreen;
 }
