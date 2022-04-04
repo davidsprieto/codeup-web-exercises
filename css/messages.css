@@ -7,11 +7,11 @@ body, html {
 }
 
 :root {
-    --main-bg-blue: skyblue;
-    --main-bg-green: lightgreen;
-    --main-bg-yellow: yellow;
-    --main-bg-red: lightcoral;
-    opacity: .6;
+    --main-bg-blue: #6998f3;
+    --main-bg-green: #89e789;
+    --main-bg-yellow: #eeee52;
+    --main-bg-red: #ec7e7e;
+    opacity: 60%;
 }
 
 .message {
