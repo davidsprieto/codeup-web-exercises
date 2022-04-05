@@ -111,7 +111,7 @@ console.log(getEvenNumbers(arrayOfNumbers));
 // function should return “sum not available” if array is empty
 // function should handle non-numbers
 
-var numbersInArray = [1, "hello", 2, 3, 4, "codeup", 5];
+var arrayOfChar = [1, "hello", 2, 3, 4, "codeup", 5];
 
 function sumArr(array) {
     if (array == "") {
@@ -121,4 +121,4 @@ function sumArr(array) {
         return array.reduce((a, b) => a + b, 0 );
     }
 }
-console.log(sumArr(numbersInArray));
+console.log(sumArr(arrayOfChar));
