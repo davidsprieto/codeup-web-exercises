@@ -12,6 +12,7 @@ body {
     background-image: url("https://images.pexels.com/photos/2802527/pexels-photo-2802527.jpeg?auto=compress&cs=tinysrgb&w=1560&h=350&dpr=1");
     background-repeat: no-repeat;
     background-position: right;
+
 }
 
 .chili-image {
@@ -19,14 +20,6 @@ body {
     max-height: 550px;
 }
 
-.sweet-chili {
-    text-align-all: left;
-}
-
-.beef-chili {
-    text-align-all: center;
-}
-
-.bean-chili {
-    text-align-all: right;
+.chili-table {
+    display: inline-block;
 }
