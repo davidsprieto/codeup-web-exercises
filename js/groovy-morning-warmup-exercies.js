@@ -101,3 +101,24 @@ function getEvenNumbers(array) {
 }
 console.log(getEvenNumbers(arrayOfNumbers));
 
+// 04/05/22 - Write a JS code that accepts an array of numbers and returns the total of the array of numbers:
+// example input: [1,2,3,4,5];
+// expected output: 15
+// some possible test cases to think about:
+// function should be called ‘sumArr’
+// function should return a number
+// function should accept an array
+// function should return “sum not available” if array is empty
+// function should handle non-numbers
+
+var numbersInArray = [1, "hello", 2, 3, 4, "codeup", 5];
+
+function sumArr(array) {
+    if (array == "") {
+        return "Sum not available";
+    } else {
+        array = array.filter(value => typeof value === 'number');
+        return array.reduce((a, b) => a + b, 0 );
+    }
+}
+console.log(sumArr(numbersInArray));
