@@ -92,8 +92,8 @@ a {
 .timeline {
     float: left;
     margin-left: 0.5em;
-    margin-right: 0.5em;
-    width: calc(50% - 1em);
+    margin-right: 3em;
+    width: calc(50% - 3.5em);
 }
 .who-to-follow {
     float: left;
