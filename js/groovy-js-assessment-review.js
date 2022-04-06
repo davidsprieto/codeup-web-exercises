@@ -70,12 +70,29 @@ function creditCard(input) {
 console.log(creditCard(creditCardNumber));
 
 
-// 6. create a function named `AlphabetSoup` that takes a string and returns a string with its letters in alphabetical order. Return false if string is empty or null
+// 6. create a function named `alphabetSoup` that takes a string and returns a string with its letters in alphabetical order. Return false if string is empty or null
+var sortLetters = "The quick brown fox jumps over the lazy dog";
+console.log("The input is: " + sortLetters);
 
-
+function alphabetSoup(input) {
+    if (typeof input !== "string" || input === "") {
+        return false;
+    } else {
+        input = input.toLowerCase().split("").sort().join("");
+        return console.log("The letters in the string sorted in alphabetical order is: " + input);
+    }
+}
+alphabetSoup(sortLetters);
 
 
 // 7. create a function named `reverse` that takes in and reverses an array.
+var arrayReverse = [1, 2, 3, "a", "b","c", true, false];
+console.log("The array is: " + arrayReverse);
+
+function reverse(input) {
+    return input.reverse();
+}
+console.log("The array reversed is: " + reverse(arrayReverse));
 
 
 // # regulus-second-js-reassessment-review
