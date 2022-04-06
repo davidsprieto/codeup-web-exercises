@@ -72,7 +72,7 @@ function filterOutNumbers(array) {
 console.log(filterOutNumbers(arrayOfCharacters));
 
 
-// 04/01/22 - Write a function that returns the reading status of each of following books:
+// 04/01/22 - Write a function that returns the reading status of each of the following books:
 
 var library = [
     {
