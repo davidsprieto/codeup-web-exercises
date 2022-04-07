@@ -95,4 +95,60 @@ function reverse(input) {
 console.log("The array reversed is: " + reverse(arrayReverse));
 
 
+// 8. Make a function named isOdd(number)
+function isOdd(number) {
+    if (number % 2 === 1) {
+        return true;
+    } else {
+        return false;
+    }
+}
+console.log(isOdd(5));
+
+
+// 9. Make a function named isEven(number)
+function isEven(number) {
+    if (number % 2 === 0) {
+        return true;
+    } else {
+        return false;
+    }
+}
+console.log(isEven(10));
+
+
+// 10. Make a function named isMultipleOfFive(input)
+function isMultipleOfFive(number) {
+    if (number % 5 === 0) {
+        return true;
+    } else {
+        return false;
+    }
+}
+console.log(isMultipleOfFive(25));
+
+
+// 11. Make a function named isMultipleOf(target, n) which checks if target is evenly divisible by n
+function isMultipleOf(target, n) {
+    if (target % n === 0) {
+        return true;
+    } else {
+        return false
+    }
+}
+console.log(isMultipleOf(10, 2));
+
+
+// 12. Make a function named isVowel(letter)
+function isVowel(letter) {
+    letter = letter.toLowerCase();
+    if (letter === "a" || letter === "e" || letter === "i" || letter === "o" || letter === "u" ) {
+        return true;
+    } else {
+        return false;
+    }
+}
+console.log(isVowel("a"));
+
+
 // # regulus-second-js-reassessment-review
