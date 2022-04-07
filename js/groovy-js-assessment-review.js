@@ -208,12 +208,16 @@ console.log(invertSign(150));
 
 
 // 12. Write a function named getRandomQuote():
-//    Inside of the function, create an array of strings where each string is a quote or thought you find inspirational
-//    getRandomQuote should generate a random number between 0 and the array's length minus 1
-//    use the randomly generated number as your index
+//    Inside of the function, create an array of strings where each string is a quote or thought you find inspirational.
+//    getRandomQuote should generate a random number between 0 and the array's length minus 1.
+//    use the randomly generated number as your index.
 //    return a random quote.
-
-
+function getRandomQuote() {
+    var quotes = ["Pay the man", "Stay hard", "Weak legs equal a weak mind", "Don't be a soft target", "Go one more"];
+    var randomIndex = Math.floor(Math.random() * (quotes.length));
+    return quotes[randomIndex];
+}
+console.log(getRandomQuote());
 
 // 13. Write a function named firstTenFibonacciNumbers() that returns an array of the first ten fibonacci numbers:
 var fibonacciArray = [0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377, 610, 987];
