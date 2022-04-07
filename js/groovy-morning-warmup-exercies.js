@@ -142,3 +142,22 @@ function sortArr(array) {
     return array.sort(); // this then sorts the array from smallest to largest value.
 }
 console.log(sortArr(arraySort));
+
+
+// 04/07/22 - Write a function that accepts a string and returns a map with the string's character frequency:
+// example input: [“b”, “a”, “n”, “a”, “n”, “a”];
+// expected output: { b: 1, a: 3, n: 2 };
+// solution found on stackoverflow.com:
+function getFrequency(string) {
+    var freq = {};
+    for (var i=0; i < string.length; i++) {
+        var character = string.charAt(i);
+        if (freq[character]) {
+            freq[character]++;
+        } else {
+            freq[character] = 1;
+        }
+    }
+    return freq;
+}
+console.log(getFrequency("frequency of characters in this string"));
