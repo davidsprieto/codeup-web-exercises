@@ -150,5 +150,77 @@ function isVowel(letter) {
 }
 console.log(isVowel("a"));
 
+// More Javascript Problems for Practice:
+//
+// ** The questions with an asterisk * are more challenging
+//
+// 6. Write a function called first(input) that returns the first character in the provided string:
+function first(input) {
+    return input.charAt(0);
+}
+console.log(first("Hello World!"));
+
+
+// 7* Create a function that takes in two string inputs:
+// -- If the second string input is present in the first, return the first input string with the second input string removed from it.
+// -- If the second string input is present multiple times in the first, the second string will only be removed where it first occurs in the first string.
+// -- If the second string input is not present in the first, return the first string as entered in the function.
+
+
+
+// 8. Make a function named isSpace(letter) that returns if a character is a space character:
+function isSpace(letter) {
+    if (letter === " " || letter === "\n" || letter === "\t" ) {
+        return "Whitespace";
+    } else {
+        return "Not whitespace";
+    }
+}
+console.log(isSpace("a"));
+
+
+// 9. Write a function named squareRoot(n) that returns the square root of the input:
+function squareRoot(n) {
+    if (!isNaN(n)) {
+        return Math.sqrt(n);
+    } else {
+        return "Invalid input";
+    }
+}
+console.log(squareRoot(9));
+
+
+// 10* create a function that will return how many whitespace characters are at the beginning of a string (hint: use regex):
+
+
+
+// 11. Write a function named invertSign(number) that returns a negative version of a positive number, a positive version of negative, and false for all else:
+function invertSign(number) {
+    if (number < 0 || number > 0) {
+        return (number * -1);
+    } else if (number === 0) {
+        return (0);
+    } else {
+        return false;
+    }
+}
+console.log(invertSign(150));
+
+
+// 12. Write a function named getRandomQuote():
+//    Inside of the function, create an array of strings where each string is a quote or thought you find inspirational
+//    getRandomQuote should generate a random number between 0 and the array's length minus 1
+//    use the randomly generated number as your index
+//    return a random quote.
+
+
+
+// 13. Write a function named firstTenFibonacciNumbers() that returns an array of the first ten fibonacci numbers:
+var fibonacciArray = [0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377, 610, 987];
+
+function firstTenFibonacciNumbers(input) {
+    return input.slice(0, 10);
+}
+console.log(firstTenFibonacciNumbers(fibonacciArray));
 
 // # regulus-second-js-reassessment-review
