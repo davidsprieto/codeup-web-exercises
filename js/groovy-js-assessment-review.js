@@ -95,15 +95,15 @@ function reverse(input) {
 console.log("The array reversed is: " + reverse(arrayReverse));
 
 
-// 8. Make a function named isOdd(number)
-function isOdd(number) {
+// 8. Make a function named isOdd2(number)
+function isOdd2(number) {
     if (number % 2 === 1) {
         return true;
     } else {
         return false;
     }
 }
-console.log(isOdd(5));
+console.log(isOdd2(5));
 
 
 // 9. Make a function named isEven(number)
