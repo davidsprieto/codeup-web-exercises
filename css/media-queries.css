@@ -1,15 +1,14 @@
 @media screen and (max-width: 364px) and (max-height: 937px) {
     body {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
         font-family: Arial;
         margin-left: 10px;
     }
 
     h1 {
         font-size: 46px;
-        margin-top: 0;
+        margin-top: 2px;
+        display: flex;
+        justify-content: center;
     }
 
     nav>ul {
@@ -17,8 +16,7 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        width: 100%;
-        margin-left: -40px;
+        margin-left: -45px;
         margin-top: -15px;
     }
 
@@ -33,7 +31,7 @@
         display: flex;
         justify-content: center;
         margin: 7px 7px;
-        width: 330px;
+        width: 319px;
         max-height: 50px;
         min-height: 25px;
     }
@@ -42,10 +40,10 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        background-color: #bde7ef;
+        background-color: #c7fafa;
         border: 0.1em solid lightgray;
         height: 50px;
-        width: 100%;
+        width: 336px;
         margin-left: 2px;
     }
 
@@ -58,13 +56,17 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        margin-right: 10px;
-        margin-left: 10px;
-        width: 350px;
+        width: 339px;
+        height: 224px;
+        margin-left: 1.5px;
     }
 
     .sub-section {
         font-style: italic;
+    }
+
+    footer>p {
+        text-align: start;
     }
 
 }
