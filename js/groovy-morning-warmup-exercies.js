@@ -161,3 +161,21 @@ function getFrequency(string) {
     return freq;
 }
 console.log(getFrequency("frequency of characters in this string"));
+
+
+// Write the code necessary to output the first 50 prime numbers.
+// Recommend starting your loop at 1 and ending your loop once you've calculated 50 primes.
+// https://en.wikipedia.org/wiki/Prime_number
+// solution found on codeacademy.com:
+for (var counter = 2; counter < 50; counter++) {
+
+    var notPrime = false;
+    for (var i = 2; i <= counter; i++) {
+        if (counter % i === 0 && i !== counter) {
+            notPrime = true;
+        }
+    }
+    if (notPrime === false) {
+        console.log(counter);
+    }
+}
