@@ -3,7 +3,26 @@
 }
 
 h1 {
-    color: whitesmoke;
+    color: black;
     text-align: center;
 }
 
+.display-4 {
+    background-color: whitesmoke;
+    opacity: 0.7;
+    width: 100%;
+}
+
+.badge-pill {
+    color: white;
+    background-color: gray;
+}
+
+.card-header {
+    background-color: #3a73e1;
+    color: white;
+}
+
+.list-group {
+
+}
