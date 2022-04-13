@@ -195,3 +195,21 @@ if (isPrime) {
     console.log(number);
     }
 }
+
+// 04/13/22 - Write a function that takes two arrays as arguments
+// Merge both arrays and remove duplicate values
+// Sort the merge result in ascending order
+// Return the resulting array
+//
+// example input: [1, 2, 3], [3, 4, 5]
+// expected output: [ 1, 2, 3, 4, 5 ]
+var arrayOfNums = [1, 2, 3, 10, 23, 45];
+var arrayOfNums2 = [3, 4, 5, 10, 78, 109];
+
+function mergeArrays(a, b) {
+    var mergeArrayOfNums = a.concat(b); // this merges the arrays
+    var removeDuplicates = [...new Set(mergeArrayOfNums)]; // this filters out duplicate values
+    var sortArray = removeDuplicates.sort(function(a, b){return a-b}); // this sorts the array in ascending order with a compare function
+    return sortArray;
+}
+console.log(mergeArrays(arrayOfNums, arrayOfNums2));
