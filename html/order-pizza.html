@@ -33,7 +33,9 @@
             </li>
         </ul>
         <div class="nav-item">
-            <a class="nav-link" href="#"><i class="fas fa-user-circle"> Sign Up</i></a>
+            <a class="nav-link" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-person-fill" viewBox="0 0 16 16">
+                <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+            </svg> Sign Up</a>
         </div>
     </div>
 </nav>
@@ -43,48 +45,58 @@
     <div class="jumbotron jumbotron-fluid .d-sm-none .d-md-block">
         <div class="container">
             <h1 class="display-4">Welcome to Pizza World!</h1>
-            <p class="lead"></p>
         </div>
     </div>
 
     <h2>Build your own pizza!</h2>
-    <ul class="nav nav-tabs">
-        <li class="nav-item">
-            <a class="nav-link active" href="#"><span class="badge-pill badge-light">1</span> Size and Crust</a>
-            <div class="card">
-                <div class="card-header">
-                    Choose Size and Crust
-                </div>
-                <div class="card-body">
-                    <div class="card">
-                        <h5 class="card-header" style="background-color:lightgray;color:black">Hand Tossed</h5>
-                        <div class="card-body">
-                            <p class="card-text">Garlic seasoned crust with a rich, buttery taste.</p>
-                        </div>
-                        <ul class="list-group">
-                            <li class="list-group-item"><input type="radio" aria-label="Radio button for following text input"> Small (10")</li>
-                            <li class="list-group-item"><input type="radio" aria-label="Radio button for following text input">  Medium (12")</li>
-                        </ul>
+    <!-- Code for user interaction of tabs starts here -->
+    <ul class="nav nav-tabs" id="myTab" role="tablist">
+        <li class="nav-item" role="presentation">
+            <a class="nav-link active" id="size-and-crust-tab" data-toggle="tab" href="#size-and-crust" role="tab" aria-controls="size-and-crust" aria-selected="true"><span class="badge-pill badge-light">1</span> Size and Crust</a>
+        </li>
+        <li class="nav-item" role="presentation">
+            <a class="nav-link" id="cheese-and-sauce-tab" data-toggle="tab" href="#cheese-and-sauce" role="tab" aria-controls="cheese-and-sauce" aria-selected="false"><span class="badge-pill badge-light">2</span> Cheese and Sauce</a>
+        </li>
+        <li class="nav-item" role="presentation">
+            <a class="nav-link" id="toppings-tab" data-toggle="tab" href="#toppings" role="tab" aria-controls="toppings" aria-selected="false"><span class="badge-pill badge-light">3</span> Toppings</a>
+        </li>
+    </ul>
+
+    <div class="tab-content" id="myTabContent">
+        <div class="tab-pane fade show active" id="size-and-crust" role="tabpanel" aria-labelledby="size-and-crust-tab">
+        <div class="card">
+            <div class="card-header">
+                Choose Size and Crust
+            </div>
+            <div class="card-body">
+                <div class="card">
+                    <h5 class="card-header" style="background-color:lightgray;color:black">Hand Tossed</h5>
+                    <div class="card-body">
+                        <p class="card-text">Garlic seasoned crust with a rich, buttery taste.</p>
                     </div>
-                    <div class="card" style="margin:10px 0;">
-                        <h5 class="card-header" style="background-color:lightgray;color:black;">Crispy Thin</h5>
-                        <div class="card-body">
-                            <p class="card-text">Thin enough for optimum crispy to crunchy ratio.</p>
-                        </div>
-                        <ul class="list-group">
-                            <li class="list-group-item"><input type="radio" aria-label="Radio button for following text input"> Medium (12")</li>
-                            <li class="list-group-item"><input type="radio" aria-label="Radio button for following text input"> Large (14")</li>
-                        </ul>
-                    </div>
+                    <ul class="list-group">
+                        <li class="list-group-item"><input type="radio" aria-label="Radio button for following text input"> Small (10")</li>
+                        <li class="list-group-item"><input type="radio" aria-label="Radio button for following text input">  Medium (12")</li>
+                    </ul>
                 </div>
-                <div class="text-right card-footer">
-                    <a href="#" class="btn btn-primary">Next Step ></a>
+                <div class="card" style="margin:10px 0;">
+                    <h5 class="card-header" style="background-color:lightgray;color:black;">Crispy Thin</h5>
+                    <div class="card-body">
+                        <p class="card-text">Thin enough for optimum crispy to crunchy ratio.</p>
+                    </div>
+                    <ul class="list-group">
+                        <li class="list-group-item"><input type="radio" aria-label="Radio button for following text input"> Medium (12")</li>
+                        <li class="list-group-item"><input type="radio" aria-label="Radio button for following text input"> Large (14")</li>
+                    </ul>
                 </div>
             </div>
-        </li>
+            <div class="text-right card-footer">
+                <a href="#cheese-and-sauce-tab" class="btn btn-primary">Next Step ></a>
+            </div>
+        </div>
+        </div>
 
-        <li class="nav-item">
-            <a class="nav-link" href="#"><span class="badge-pill badge-light">2</span> Cheese and Sauce</a>
+        <div class="tab-pane fade" id="cheese-and-sauce" role="tabpanel" aria-labelledby="cheese-and-sauce-tab">
             <div class="card">
                 <div class="card-header">
                     Choose Cheese and Sauce
@@ -119,24 +131,22 @@
                             <li class="list-group-item">
                             <p class="card-text">How Much?</p>
                             <select class="custom-select custom-select-sm">
-                                <option selected>Robust Inspired Tomato Sauce</option>
-                                <option value="1">Marinara Sauce</option>
-                                <option value="2">BBQ Sauce</option>
-                                <option value="3">Alfredo Sauce</option>
-                                <option value="3">Spicy Marinara Sauce</option>
+                                <option selected>Regular</option>
+                                <option value="1">Light</option>
+                                <option value="2">Normal</option>
+                                <option value="3">Extra</option>
                             </select>
                             </li>
                         </ul>
                     </div>
                 </div>
                 <div class="text-right card-footer">
-                    <a href="#" class="btn btn-primary">< Previous Step</a><a href="#" class="btn btn-primary">Next Step ></a>
+                    <a href="#size-and-crust-tab" class="btn btn-primary">< Previous Step</a> <a href="#toppings-tab" class="btn btn-primary">Next Step ></a>
                 </div>
             </div>
-        </li>
+        </div>
 
-        <li class="nav-item">
-            <a class="nav-link" href="#"><span class="badge-pill badge-light">3</span> Toppings</a>
+        <div class="tab-pane fade" id="toppings" role="tabpanel" aria-labelledby="toppings-tab">
             <div class="card">
                 <div class="card-header">
                     Choose Toppings
@@ -162,15 +172,14 @@
                     </div>
                 </div>
                 <div class="text-right card-footer">
-                    <a href="#" class="btn btn-primary">Checkout</a>
+                    <a href="#cheese-and-sauce-tab" class="btn btn-primary">< Previous Step</a> <a href="#" class="btn btn-primary">Checkout <i class="fas fa-shopping-cart"></i></a>
                 </div>
             </div>
-        </li>
-    </ul>
-
+        </div>
+    </div>
 </div>
 
-
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
 <!-- Your custom JS goes here -->
 
