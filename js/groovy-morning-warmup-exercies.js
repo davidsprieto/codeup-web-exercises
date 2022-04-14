@@ -213,3 +213,23 @@ function mergeArrays(a, b) {
     return sortArray;
 }
 console.log(mergeArrays(arrayOfNums, arrayOfNums2));
+
+
+// 04/14/22 - Write a function that takes an array of objects as an argument
+// Sort the array by property b in ascending order
+// Return the sorted array
+//
+// example input: [{a:1,b:7},{a:2,b:1}]
+// expected output: [{a:2,b:1},{a:1,b:7}]
+var objectSort = [{a:3, b:7}, {a:2, b:1}, {a:5, b:3}];
+
+console.log(objectSort.sort((a, b) => {
+    return (a.b - b.b);
+}));
+
+// Another way to write the above solution is below which has a compare function within a function.
+// Notice there's two 'return's written. One for the function and one for the compare function within the function.
+function sortArrayOfObjects(array) {
+    return array.sort((a, b) => {return a.b - b.b});
+}
+console.log(sortArrayOfObjects(objectSort));
