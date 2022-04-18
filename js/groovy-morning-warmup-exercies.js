@@ -233,3 +233,27 @@ function sortArrayOfObjects(array) {
     return array.sort((a, b) => {return a.b - b.b});
 }
 console.log(sortArrayOfObjects(objectSort));
+
+// 04/18/22 - Rewrite the following using a for-loop:
+// var d = 20;
+// while (d >= 0) {
+//     console.log(d);
+//     d--;
+// }
+for (var d = 20; d >= 0; d--) {
+    console.log(d);
+}
+
+
+// 04/18/22 - Write a function that takes an object (a) as argument and returns an array with all object keys:
+// example input: {a:1,b:2,c:3}
+// expected output: ['a','b','c']
+// ------------------------
+//     example input:{j:9,i:2,x:3,z:4}
+// expected output: ['j','i','x','z']
+var object1 = {a:1, b:2, c:3}
+
+function objectKeys() {
+    return Object.keys(object1);
+}
+console.log(objectKeys(object1));
