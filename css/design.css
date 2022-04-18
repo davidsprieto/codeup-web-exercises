@@ -1,0 +1,158 @@
+.logo-img{
+    margin-right: 1em;
+    height: 105px;
+    width: 105px;
+}
+
+nav {
+    background-color: #F0F0F0;
+}
+
+.navbar-brand{
+    margin-right: 2em;
+}
+
+body {
+    font-family: Abel;
+    background-color: #F0F0F0;
+}
+
+h1 {
+    text-align: center;
+    font-family: Anton;
+    margin-top: 50px;
+}
+
+h2 {
+    text-align: center;
+    font-family: Anton;
+}
+
+.button {
+    padding: 20px;
+    text-align: center;
+    text-decoration: none;
+    display: flex;
+    font-size: 16px;
+    margin: 0 14px;
+}
+
+.button1 {
+    border: 8px solid white;
+    color: white;
+    background-color: #E6563B;
+    border-radius: 105px;
+    width: 100px;
+    height: 100px;
+    justify-content: center;
+    align-items: center;
+}
+
+.button2 {
+    border: 8px solid white;
+    color: white;
+    background-color: #EB9D3A;
+    border-radius: 105px;
+    width: 100px;
+    height: 100px;
+    justify-content: center;
+    align-items: center;
+}
+
+.button3 {
+    border: 8px solid white;
+    color: white;
+    background-color: #7CB06C;
+    border-radius: 105px;
+    width: 100px;
+    height: 100px;
+    justify-content: center;
+    align-items: center;
+}
+
+.button4 {
+    border: 8px solid white;
+    color: white;
+    background-color: #00ABA9;
+    border-radius: 105px;
+    width: 100px;
+    height: 100px;
+    justify-content: center;
+    align-items: center;
+}
+
+.button-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2em 0;
+}
+
+hr {
+    width: 95%;
+}
+
+.column {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.col-img {
+    width: 21em;
+    height: auto;
+    border: 7px solid #E6E6E6;
+    margin: 20px 10px;
+}
+
+.button-sm {
+    font-family: Anton;
+    border: none;
+    text-align: center;
+    text-decoration: none;
+    display: flex;
+    font-size: 16px;
+    margin: -20px 4px;
+}
+
+.b1 {
+    background-color: #E6563B;
+    border-radius: 105px;
+    width: 25px;
+    height: 25px;
+    justify-content: center;
+    align-items: center;
+}
+
+.b2 {
+    background-color: #EB9D3A;
+    border-radius: 105px;
+    width: 25px;
+    height: 25px;
+    justify-content: center;
+    align-items: center;
+}
+
+.b3 {
+    background-color: #7CB06C;
+    border-radius: 105px;
+    width: 25px;
+    height: 25px;
+    justify-content: center;
+    align-items: center;
+}
+
+.b4 {
+    background-color: #00ABA9;
+    border-radius: 105px;
+    width: 25px;
+    height: 25px;
+    justify-content: center;
+    align-items: center;
+}
+
+.featured-text {
+    margin-top: -15px;
+    margin-left: 25px;
+    margin-right: 80px;
+}
