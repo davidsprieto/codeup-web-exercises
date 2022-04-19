@@ -1,7 +1,7 @@
 .logo-img{
     margin-right: 1em;
-    height: 105px;
-    width: 105px;
+    height: 75px;
+    width: 75px;
 }
 
 nav {
@@ -10,6 +10,7 @@ nav {
 
 .navbar-brand{
     margin-right: 2em;
+    font-size: 28px;
 }
 
 body {
@@ -21,6 +22,7 @@ h1 {
     text-align: center;
     font-family: Anton;
     margin-top: 50px;
+    font-size: 62px;
 }
 
 h2 {
@@ -89,18 +91,19 @@ h2 {
 }
 
 hr {
-    width: 95%;
+    width: 57.3%;
 }
 
 .column {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin: 15px 0;
 }
 
 .col-img {
     width: 21em;
-    height: auto;
+    height: 15em;
     border: 7px solid #E6E6E6;
     margin: 20px 10px;
 }
@@ -155,4 +158,8 @@ hr {
     margin-top: -15px;
     margin-left: 25px;
     margin-right: 80px;
+}
+
+.col-6 {
+    margin-right: 0;
 }
