@@ -98,7 +98,6 @@ hr {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 15px 0;
 }
 
 .col-img {
@@ -154,12 +153,25 @@ hr {
     align-items: center;
 }
 
-.featured-text {
-    margin-top: -15px;
-    margin-left: 25px;
-    margin-right: 80px;
-}
+/*.featured-text {*/
+/*    margin-top: -15px;*/
+/*    margin-left: 25px;*/
+/*    margin-right: 80px;*/
+/*}*/
 
 .col-6 {
     margin-right: 0;
+}
+
+.image-sm {
+    border: 7px solid #E6E6E6;
+}
+
+.text {
+    font-family: Anton;
+    font-size: 22px;
+}
+
+.the-last-row {
+    margin-top: 20px;
 }
