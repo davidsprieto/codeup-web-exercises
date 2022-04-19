@@ -257,3 +257,25 @@ function objectKeys() {
     return Object.keys(object1);
 }
 console.log(objectKeys(object1));
+
+
+// 04/19/22 - Write a function that iterates through numbers 1 and 15 and returns the
+// numbers that are divisible by 3 (hint hint hint: learn how to use a modulus).
+function divisibleBy3() {
+    for (var c = 1; c <= 15; c++) {
+        if (c % 3 === 0) {
+            return (console.log(c));
+        }
+    }
+}
+divisibleBy3();
+
+// 04/19/22 - Write a function that takes a Set and an array as arguments. If not already existing,
+// add each element in the array to the Set. Return the modified Set
+//
+// example input: new Set([1, 2, 3]), [4, 5, 6]
+// expected output: new Set([1, 2, 3, 4, 5, 6 ])
+// -------------------------
+// example input:new Set([1, 2, 3]), [2, 3]
+// expected output: new Set([1, 2, 3])
+// -------------------------
