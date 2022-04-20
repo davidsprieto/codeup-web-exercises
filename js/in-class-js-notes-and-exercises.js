@@ -40,3 +40,6 @@ var car = {
 }
 console.log("I drive a " + car.make + " " + car.model + " and I like to listen to radio stations: " + car.radioStations[1] + " & " + car.radioStations[5] + ".");
 
+// 04/20/22 - JS Review
+var array = [2, 4, 6, {a:1, b:2}, 8, 10, 12];
+console.log(array[3].b); // accesses the object key 'b' with a value of '2' located in the 3rd element position within the array.
