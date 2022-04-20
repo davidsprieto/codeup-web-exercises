@@ -280,7 +280,12 @@ divisibleBy3();
 // expected output: new Set([1, 2, 3])
 // -------------------------
 
-
+function addSetAndArray(set, array) {
+    var newSet = set.concat(array); // this joins the set and array
+    console.log(newSet); // this logs to the console the new set
+    return [...new Set(newSet)]; // this returns the new set with duplicate values filtered out
+}
+console.log(addSetAndArray(([1, 2, 3]), [4, 5, 6]));
 
 // 04/20/22 - List the primitive data types in javascript:
 // Primitive types: boolean, number, string, undefined, null, bigint, and symbol.
