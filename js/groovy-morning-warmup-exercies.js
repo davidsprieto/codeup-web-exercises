@@ -279,3 +279,28 @@ divisibleBy3();
 // example input:new Set([1, 2, 3]), [2, 3]
 // expected output: new Set([1, 2, 3])
 // -------------------------
+
+
+
+// 04/20/22 - List the primitive data types in javascript:
+// Primitive types: boolean, number, string, undefined, null, bigint, and symbol.
+
+// 04/20/22 - Write a function that takes an object as argument
+// Swap the Javascript object's key with its values and return the resulting object
+//
+// example input: {z:'a',y:'b',x:'c',w:'d'}
+// expected output: {a:'z',b:'y',c:'x',d:'w'}
+// -------------------------
+// example input:{2:'a',4:'b',6:'c',8:'d'}
+// expected output: {a:'2',b:'4',c:'6',d:'8'}
+// -------------------------
+// solution found on bobbyhadz.com
+var object2 = {z:'a',y:'b',x:'c',w:'d'};
+
+function swapValuesAndKeys(obj) {
+    var swapped = Object.entries(obj).map(
+        ([key, value]) => [value, key]
+    );
+    return Object.fromEntries(swapped);
+}
+console.log(swapValuesAndKeys(object2));
