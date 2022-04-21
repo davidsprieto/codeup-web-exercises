@@ -329,3 +329,13 @@ function addProperty(array, string) {
     return array;
 }
 console.log(addProperty(cityArray, continentString));
+
+// 04/21/22 - How can you add “strawberry” to the beginning, middle, and end of the following array?
+// var fruits = ["mango", "blueberries", "oranges", "banana", "papaya", "kiwi"];
+var fruits = ['mango', 'blueberries', 'oranges', 'banana', 'papaya', 'kiwi'];
+
+fruits.unshift('strawberry'); // this adds 'strawberry' to the beginning of the array
+fruits.splice(3, 0, 'strawberry'); // this adds 'strawberry' to the middle of the array at index 3
+fruits.push('strawberry'); // this adds 'strawberry' to the end of the array
+console.log(fruits);
+
