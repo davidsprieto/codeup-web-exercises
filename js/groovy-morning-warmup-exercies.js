@@ -270,6 +270,7 @@ function divisibleBy3() {
 }
 divisibleBy3();
 
+
 // 04/19/22 - Write a function that takes a Set and an array as arguments. If not already existing,
 // add each element in the array to the Set. Return the modified Set
 //
@@ -279,13 +280,13 @@ divisibleBy3();
 // example input:new Set([1, 2, 3]), [2, 3]
 // expected output: new Set([1, 2, 3])
 // -------------------------
-
 function addSetAndArray(set, array) {
     var newSet = set.concat(array); // this joins the set and array
     console.log(newSet); // this logs to the console the new set
     return [...new Set(newSet)]; // this returns the new set with duplicate values filtered out
 }
-console.log(addSetAndArray(([1, 2, 3]), [4, 5, 6]));
+console.log(addSetAndArray(([1, 2, 3]), [2, 3, 4, 5, 6]));
+
 
 // 04/20/22 - List the primitive data types in javascript:
 // Primitive types: boolean, number, string, undefined, null, bigint, and symbol.
@@ -309,3 +310,22 @@ function swapValuesAndKeys(obj) {
     return Object.fromEntries(swapped);
 }
 console.log(swapValuesAndKeys(object2));
+
+
+// 04/21/22 -
+// Write a function that takes an array of objects and a string as arguments
+// Add a property with key 'continent' and value equal to the string to each of the objects
+// Return the new array of objects
+// Tip: try not to mutate the original array
+
+// example input: [{ city: 'Tokyo', country: 'Japan' }, { city: 'Bangkok', country: 'Thailand' }], 'Asia'
+// expected output: [{ city: 'Tokyo', country: 'Japan', continent: 'Asia' }, { city: 'Bangkok', country: 'Thailand', continent: 'Asia' }]
+var cityArray = [{city: 'Tokyo', country: 'Japan'}, {city: 'Bangkok', country: 'Thailand'}]
+var continentString = 'Asia'
+
+function addProperty(array, string) {
+    array[0].continent = string;
+    array[1].continent = string;
+    return array;
+}
+console.log(addProperty(cityArray, continentString));
