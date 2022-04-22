@@ -19,7 +19,7 @@ var davidObject = {
     petName: "Ava",
     favoriteHobbies: ["weightlifting", "kayaking", "hiking", "reading"],
     minusAge: function() {
-        return davidObject.age - 10;
+        return davidObject.age - 10; // can also be written using 'this' keyword: return this.age - 10;
     }
 }
 console.log(davidObject.minusAge());
@@ -42,4 +42,4 @@ console.log("I drive a " + car.make + " " + car.model + " and I like to listen t
 
 // 04/20/22 - JS Review
 var array = [2, 4, 6, {a:1, b:2}, 8, 10, 12];
-console.log(array[3].b); // accesses the object key 'b' with a value of '2' located in the 3rd element position within the array.
+console.log(array[3].b); // accesses the object key/property 'b' with a value of '2' located in the 3rd index position of the elements within the array.
