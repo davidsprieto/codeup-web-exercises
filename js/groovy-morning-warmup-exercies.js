@@ -7,7 +7,6 @@ function triangleArea (b, h) {
 }
 console.log(triangleArea(5, 6));
 
-
 // Function for the area of a triangle when all three sides are known:
 function areaOfTriangle (a, b, c) {
     return ((a + b + c) / 2);
@@ -34,7 +33,6 @@ function stringReverse(str) {
 }
 console.log(stringReverse("hello"));
 
-
 // Above solution can be rewritten as seen below to have all methods be performed on the input and stored in one variable.
 function stringReverse2(str) {
     var reverseString = str.split("").reverse().join("");
@@ -43,7 +41,7 @@ function stringReverse2(str) {
 console.log(stringReverse2("hello"));
 
 
-// 03/28/22 - Return true if a string is a palindrome and false if it isn't. (A palindrome is a word that reads the same both forward and backward, example: racecar).
+// 03/29/22 - Return true if a string is a palindrome and false if it isn't. (A palindrome is a word that reads the same both forward and backward, example --> racecar:
 // Solution found on freecodecamp.org
 function palindrome(str) {
     var re = /[\W_]/g;
@@ -163,7 +161,7 @@ function getFrequency(string) {
 console.log(getFrequency("frequency of characters in this string"));
 
 
-// 04/11/22 - Write the code necessary to output the first 50 prime numbers.
+// 04/11/22 - Write the code necessary to output the first 50 prime numbers:
 // Recommend starting your loop at 1 and ending your loop once you've calculated 50 primes.
 // https://en.wikipedia.org/wiki/Prime_number
 // solution found on codeacademy.com:
@@ -196,7 +194,8 @@ if (isPrime) {
     }
 }
 
-// 04/13/22 - Write a function that takes two arrays as arguments
+
+// 04/13/22 - Write a function that takes two arrays as arguments:
 // Merge both arrays and remove duplicate values
 // Sort the merge result in ascending order
 // Return the resulting array
@@ -215,7 +214,7 @@ function mergeArrays(a, b) {
 console.log(mergeArrays(arrayOfNums, arrayOfNums2));
 
 
-// 04/14/22 - Write a function that takes an array of objects as an argument
+// 04/14/22 - Write a function that takes an array of objects as an argument:
 // Sort the array by property b in ascending order
 // Return the sorted array
 //
@@ -234,6 +233,7 @@ function sortArrayOfObjects(array) {
 }
 console.log(sortArrayOfObjects(objectSort));
 
+
 // 04/18/22 - Rewrite the following using a for-loop:
 // var d = 20;
 // while (d >= 0) {
@@ -243,7 +243,6 @@ console.log(sortArrayOfObjects(objectSort));
 for (var d = 20; d >= 0; d--) {
     console.log(d);
 }
-
 
 // 04/18/22 - Write a function that takes an object (a) as argument and returns an array with all object keys:
 // example input: {a:1,b:2,c:3}
@@ -259,8 +258,8 @@ function objectKeys() {
 console.log(objectKeys(object1));
 
 
-// 04/19/22 - Write a function that iterates through numbers 1 and 15 and returns the
-// numbers that are divisible by 3 (hint hint hint: learn how to use a modulus).
+// 04/19/22 - Write a function that iterates through numbers 1 and 15:
+// it needs to return the numbers that are divisible by 3 (hint hint hint: learn how to use a modulus).
 function divisibleBy3() {
     for (var c = 1; c <= 15; c++) {
         if (c % 3 === 0) {
@@ -270,9 +269,8 @@ function divisibleBy3() {
 }
 divisibleBy3();
 
-
 // 04/19/22 - Write a function that takes a Set and an array as arguments. If not already existing,
-// add each element in the array to the Set. Return the modified Set
+// add each element in the array to the Set. Return the modified Set:
 //
 // example input: new Set([1, 2, 3]), [4, 5, 6]
 // expected output: new Set([1, 2, 3, 4, 5, 6 ])
@@ -289,10 +287,11 @@ console.log(addSetAndArray(([1, 2, 3]), [2, 3, 4, 5, 6]));
 
 
 // 04/20/22 - List the primitive data types in javascript:
-// Primitive types: boolean, number, string, undefined, null, bigint, and symbol.
+var primitiveDataTypes = ['boolean', 'number', 'string', undefined, null, 'bigint', 'symbol'];
+console.log(primitiveDataTypes);
 
-// 04/20/22 - Write a function that takes an object as argument
-// Swap the Javascript object's key with its values and return the resulting object
+// 04/20/22 - Write a function that takes an object as argument,
+// Swap the Javascript object's key with its values and return the resulting object:
 //
 // example input: {z:'a',y:'b',x:'c',w:'d'}
 // expected output: {a:'z',b:'y',c:'x',d:'w'}
@@ -312,10 +311,9 @@ function swapValuesAndKeys(obj) {
 console.log(swapValuesAndKeys(object2));
 
 
-// 04/21/22 -
-// Write a function that takes an array of objects and a string as arguments
-// Add a property with key 'continent' and value equal to the string to each of the objects
-// Return the new array of objects
+// 04/21/22 - Write a function that takes an array of objects and a string as arguments,
+// Add a property with key 'continent' and value equal to the string to each of the objects,
+// Return the new array of objects:
 // Tip: try not to mutate the original array
 
 // example input: [{ city: 'Tokyo', country: 'Japan' }, { city: 'Bangkok', country: 'Thailand' }], 'Asia'
@@ -330,7 +328,7 @@ function addProperty(array, string) {
 }
 console.log(addProperty(cityArray, continentString));
 
-// 04/21/22 - How can you add “strawberry” to the beginning, middle, and end of the following array?
+// 04/21/22 - How can you add “strawberry” to the beginning, middle, and end of the following array?:
 // var fruits = ["mango", "blueberries", "oranges", "banana", "papaya", "kiwi"];
 var fruits = ['mango', 'blueberries', 'oranges', 'banana', 'papaya', 'kiwi'];
 
@@ -339,9 +337,10 @@ fruits.splice(3, 0, 'strawberry'); // this adds 'strawberry' to the middle of th
 fruits.push('strawberry'); // this adds 'strawberry' to the end of the array
 console.log(fruits);
 
-// 04/22/22 - Write a function that takes an array (a) as argument
-// Extract the first 3 elements of (a)
-// Return the resulting array
+
+// 04/22/22 - Write a function that takes an array (a) as argument,
+// Extract the first 3 elements of (a),
+// Return the resulting array:
 var extract = ['d', 'hello', 3, true, '24', 23];
 
 function extract3Elements(a) {
@@ -350,10 +349,9 @@ function extract3Elements(a) {
 }
 console.log(extract3Elements(extract));
 
-// 04/22/22 -
-// 2.  Write an object that describes which brands own which cereals (you can be creative here) . After the object has been declared …
+// 04/22/22 - Write an object that describes which brands own which cereals (you can be creative here). After the object has been declared,
 // A) add properties and values to the existing object
-// B) re-assign 2 properties’ values
+// B) re-assign 2 properties’ values:
 var cerealObject = [{brand: "kellogg's", cereal: 'raisin bran'}, {brand: 'general mills', cereal: 'golden grahams'},{brand: 'post holdings', cereal: 'honey bunches of oats'}];
 
 for (var z = 0; z < cerealObject.length; z++) {
