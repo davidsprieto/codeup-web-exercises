@@ -301,7 +301,7 @@ console.log(addSetAndArray(([1, 2, 3]), [2, 3, 4, 5, 6]));
 // expected output: {a:'2',b:'4',c:'6',d:'8'}
 // -------------------------
 // solution found on bobbyhadz.com
-var object2 = {z:'a',y:'b',x:'c',w:'d'};
+var object2 = {z:'a', y:'b', x:'c', w:'d'};
 
 function swapValuesAndKeys(obj) {
     var swapped = Object.entries(obj).map(
@@ -339,3 +339,32 @@ fruits.splice(3, 0, 'strawberry'); // this adds 'strawberry' to the middle of th
 fruits.push('strawberry'); // this adds 'strawberry' to the end of the array
 console.log(fruits);
 
+// 04/22/22 - Write a function that takes an array (a) as argument
+// Extract the first 3 elements of (a)
+// Return the resulting array
+var extract = ['d', 'hello', 3, true, '24', 23];
+
+function extract3Elements(a) {
+    a.splice(0, 3);
+    return a;
+}
+console.log(extract3Elements(extract));
+
+// 04/22/22 -
+// 2.  Write an object that describes which brands own which cereals (you can be creative here) . After the object has been declared …
+// A) add properties and values to the existing object
+// B) re-assign 2 properties’ values
+var cerealObject = [{brand: "kellogg's", cereal: 'raisin bran'}, {brand: 'general mills', cereal: 'golden grahams'},{brand: 'post holdings', cereal: 'honey bunches of oats'}];
+
+for (var z = 0; z < cerealObject.length; z++) {
+    if (cerealObject[z].cereal === 'raisin bran') {
+        cerealObject[z].tasty = "no";
+    } else {
+        cerealObject[z].tasty = "yes";
+    }
+}
+console.log(cerealObject);
+
+cerealObject[0].cereal = 'frosted flakes';
+cerealObject[0].tasty = 'yes';
+console.log(cerealObject);
