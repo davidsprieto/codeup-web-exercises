@@ -366,3 +366,14 @@ console.log(cerealObject);
 cerealObject[0].cereal = 'frosted flakes';
 cerealObject[0].tasty = 'yes';
 console.log(cerealObject);
+
+// 04/25/22 -  Write a function that takes an array of numbers as an argument and returns the number of negative values in the array:
+// example Input: [1,-2,2,-4]
+// expected output: 2
+var arrayNums = [1, -2, 2, -4];
+
+function negativeFrequency(array) {
+
+}
+
+console.log(negativeFrequency(arrayNums));
