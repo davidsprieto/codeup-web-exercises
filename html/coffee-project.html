@@ -23,80 +23,82 @@
 <div class="container">
     <div class="row">
         <div class="col">
-            <div class="1">
+            <div id="1">
                 <h1>Light City</h1>
                 <p>Light</p>
             </div>
-            <div class="2">
+            <div id="2">
                 <h1>Half City</h1>
                 <p>Light</p>
             </div>
-            <div class="3">
+            <div id="3">
                 <h1>Cinnamon</h1>
                 <p>Light</p>
             </div>
-            <div class="4">
+            <div id="4">
                 <h1>City</h1>
                 <p>Medium</p>
             </div>
-            <div class="5">
+            <div id="5">
                 <h1>American</h1>
                 <p>Medium</p>
             </div>
-            <div class="6">
+            <div id="6">
                 <h1>Breakfast</h1>
                 <p>Medium</p>
             </div>
-            <div class="7">
+            <div id="7">
                 <h1>High</h1>
                 <p>Dark</p>
             </div>
         </div>
 
         <div class="col">
-            <div class="8">
+            <div id="8">
                 <h1>Continental</h1>
                 <p>Dark</p>
             </div>
-            <div class="9">
+            <div id="9">
                 <h1>New Orleans</h1>
                 <p>Dark</p>
             </div>
-            <div class="10">
+            <div id="10">
                 <h1>European</h1>
                 <p>Dark</p>
             </div>
-            <div class="11">
+            <div id="11">
                 <h1>Espresso</h1>
                 <p>Dark</p>
             </div>
-            <div class="12">
+            <div id="12">
                 <h1>Viennese</h1>
                 <p>Dark</p>
             </div>
-            <div class="13">
+            <div id="13">
                 <h1>Italian</h1>
                 <p>Dark</p>
             </div>
-            <div class="14">
+            <div id="14">
                 <h1>French</h1>
                 <p>Dark</p>
             </div>
         </div>
 
-
         <div class="col">
-            <form class="coffee-roast-form">
-                <label for="roast-selection"></label>
+            <form name="coffee" class="coffee-roast-form">
+                <label for="roast-selection">Roast:</label>
                 <select id="roast-selection">
                     <option>light</option>
                     <option>medium</option>
                     <option>dark</option>
                 </select>
-                <input id="submit" type="submit" />
+                <div>
+                    <label for="coffee-selection">Coffee:</label>
+                    <input id="coffee-selection" type="text" name="coffee-selection" placeholder="Search for a Coffee">
+                    <input id="submit" type="submit"/>
+                </div>
             </form>
         </div>
-    </div>
 </div>
 
 <!--    <table>-->
@@ -110,8 +112,8 @@
 <!--        <tbody id="coffees"></tbody>-->
 <!--    </table>-->
 
-<script src="/js/coffee-project.js"></script>
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+<script src="/js/coffee-project.js"></script>
 </body>
 </html>
