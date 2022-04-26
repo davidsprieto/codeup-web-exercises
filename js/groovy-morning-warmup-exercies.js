@@ -370,13 +370,16 @@ console.log(cerealObject);
 // 04/25/22 -  Write a function that takes an array of numbers as an argument and returns the number of negative values in the array:
 // example Input: [1,-2,2,-4]
 // expected output: 2
-var arrayNums = [1, -2, 2, -4, -5, 9, 8, -7];
+var arrayNums = [1, -2, 2, -4, -5, 9, 8, -7, 0];
 
 function negativeFrequency(array) {
+    var amountOfNegatives = 0;
     for (let i = 0; i < array.length; i++) {
         if (array[i] < 0) {
+            amountOfNegatives++;
         }
     }
+    return amountOfNegatives;
 }
 
 console.log(negativeFrequency(arrayNums));
