@@ -65,11 +65,12 @@ coffees.sort((a, b) => {
 });
 
 var bodyMainDiv = document.querySelector('#coffees');
-var submitButton = document.querySelector('#submit');
+// var submitButton = document.querySelector('#submit');
 var roastSelection = document.querySelector('#roast-selection');
 var coffeeSearch = document.querySelector('#coffee-selection');
 
 bodyMainDiv.innerHTML = renderCoffees(coffees);
 
-submitButton.addEventListener('click', updateCoffeesByRoast);
+roastSelection.addEventListener('change', updateCoffeesByRoast);
+// submitButton.addEventListener('click', updateCoffeesByRoast);
 coffeeSearch.addEventListener('keyup', updateCoffeesByName);
