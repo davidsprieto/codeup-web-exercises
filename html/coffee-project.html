@@ -18,18 +18,36 @@
     </div>
 </header>
 
-<!--Main Body Div Code Here-->
-<!--Render Coffees JS Functions Code Below:-->
+<!--Top Card Below Header with Quote Here:-->
+<div class="container card">
+    <div class="card-header">
+        Coffee
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cup-fill" viewBox="0 0 16 16">
+            <path d="M1 2a1 1 0 0 1 1-1h11a1 1 0 0 1 1 1v1h.5A1.5 1.5 0 0 1 16 4.5v7a1.5 1.5 0 0 1-1.5 1.5h-.55a2.5 2.5 0 0 1-2.45 2h-8A2.5 2.5 0 0 1 1 12.5V2zm13 10h.5a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.5-.5H14v8z"/>
+        </svg>
+    </div>
+    <div class="card-body">
+        <blockquote class="blockquote mb-0">
+            <p>Good ideas start with brainstorming, <strong>great</strong> ideas start with coffee.</p>
+            <footer class="blockquote-footer">Dwight Schrute in <cite title="Source Title">The Office</cite></footer>
+        </blockquote>
+    </div>
+</div>
+
+<br>
+
+<!--Main Body Div Code (Render Coffees JS Functions) Here:-->
 <div class="container">
     <div class="row">
-        <div class="col-8 text-center">
+        <div class="col-8 text-center card">
             <div id="coffees" class="coffee">
+                <span>Coffee Id</span>
                 <h1>Coffee Name</h1>
                 <p>Coffee Roast</p>
             </div>
         </div>
-        <!--Filter by Roast & Coffee Search Code Here:-->
-        <div class="col-4 text-center">
+        <!--Filter by Roast & Coffee Search HTML Code Here:-->
+        <div class="col-4 text-center card">
             <form>
                 <h1>Search for a Coffee:</h1>
                 <label for="roast-selection">Filter by Roast:</label>
@@ -60,6 +78,16 @@
             </form>
             <div>
                 <input class="btn btn-dark btn-block" id="submit" type="submit" />
+            </div>
+            <br>
+            <!--Card with Coffee Image and Link To National Coffee Association Here:-->
+            <div class="card mx-auto" style="width: 18rem;">
+                <img src="https://images.pexels.com/photos/302904/pexels-photo-302904.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" class="card-img-top" alt="...">
+                <div class="card-body text-center">
+                    <h5 class="card-title"><span class="badge badge-warning">#11:</span> Espresso Latté</h5>
+                    <p class="card-text">A harmonious combination of our Italian Espresso and steamed milk.</p>
+                    <a href="https://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide" target="_blank" class="btn btn-dark">Visit National Coffee Association</a>
+                </div>
             </div>
         </div>
     </div>
