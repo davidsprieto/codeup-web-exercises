@@ -367,6 +367,7 @@ cerealObject[0].cereal = 'frosted flakes';
 cerealObject[0].tasty = 'yes';
 console.log(cerealObject);
 
+
 // 04/25/22 -  Write a function that takes an array of numbers as an argument and returns the number of negative values in the array:
 // example Input: [1,-2,2,-4]
 // expected output: 2
@@ -383,3 +384,29 @@ function negativeFrequency(array) {
 }
 
 console.log(negativeFrequency(arrayNums));
+
+
+// 04/26/22 - Write a function that takes two date instances as argument:
+// It should return the number of days that lies between those dates
+// example input: new Date('2020-06-11'), new Date('2020-06-01')
+// expected output: 10
+
+
+
+// 04/26/22 - // Write a function that takes an array (a) and a number (b) as arguments:
+// Sum up all array elements with a value greater than b
+// Return the sum
+// example input: [1, 2, 3, 4, 5, 6, 7], 2
+// expected output: 25
+var arrayOfNumbs = [1, 2, 3, 4, 5, 6, 7]
+
+function sumArray(a, b) {
+    var sumOfNumbs = 0;
+    for (let i = 0; i < a.length; i++) {
+        if (a[i] > b) {
+            sumOfNumbs = sumOfNumbs + a[i];
+        }
+    }
+    return sumOfNumbs;
+}
+console.log(sumArray(arrayOfNumbs, 2));
