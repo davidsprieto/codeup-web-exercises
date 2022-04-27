@@ -1,3 +1,4 @@
+"use strict"
 // Groovy Morning Warmup Exercises:
 // Exercise: Write a javascript function that accepts the 3 lengths of a triangle and outputs the triangle’s area.
 
