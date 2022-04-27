@@ -390,7 +390,13 @@ console.log(negativeFrequency(arrayNums));
 // It should return the number of days that lies between those dates
 // example input: new Date('2020-06-11'), new Date('2020-06-01')
 // expected output: 10
+var date1 = new Date('2020-06-11');
+var date2 = new Date('2020-06-01');
 
+function daysBetweenDates(a, b) {
+
+}
+console.log(daysBetweenDates(date1, date2));
 
 
 // 04/26/22 - // Write a function that takes an array (a) and a number (b) as arguments:
