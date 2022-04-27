@@ -4,13 +4,13 @@
 //     console.log(event.keyCode);
 // });
 
-var userTyping = '';
-var konamiKeys = '3838404037393739666513';
-userTyping = userTyping + $(document).keyup(function(event){
-    console.log(event.keyCode);
-});
 
 function konamiCheatCode() {
+    var konamiKeys = '3838404037393739666513';
+    var userTyping = '';
+    userTyping = userTyping + $(document).keyup(function(event){
+        console.log(event.keyCode);
+    });
     if (konamiKeys === userTyping) {
         alert('You have unlocked 30 lives!');
     }
