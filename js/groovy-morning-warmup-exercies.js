@@ -395,7 +395,9 @@ var date1 = new Date('2020-06-11');
 var date2 = new Date('2020-06-01');
 
 function daysBetweenDates(a, b) {
-
+    let differenceInTime = a.getTime() - b.getTime();
+    let differenceInDays = differenceInTime / (1000 * 3600 * 24);
+    return differenceInDays;
 }
 console.log(daysBetweenDates(date1, date2));
 
