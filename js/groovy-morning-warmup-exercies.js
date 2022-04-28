@@ -428,5 +428,11 @@ console.log(sumArray(arrayOfNumbs, 2));
 // expected output: [3,6,9]
 var arrayNth = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
-const everyNth = (a, nth) => a.filter((e, i) => i % nth === nth - 1);
+function everyNth(a, n) {
+    return a.filter((e, i) => i % n === n - 1);
+}
 console.log(everyNth(arrayNth, 3));
+
+// Above solution can also be written as:
+const everyNthNum = (a, n) => a.filter((e, i) => i % n === n - 1);
+console.log(everyNthNum(arrayNth, 3));
