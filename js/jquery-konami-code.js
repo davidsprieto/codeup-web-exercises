@@ -18,10 +18,19 @@ function konamiCheatCode() {
                 'background-repeat': 'no-repeat',
                 'background-size': 'cover',
             });
-            $('#konami').css({
-                'text-align': 'center',
-                'color': 'white'
-            });
+            $('#konami').html('Welcome to The Arcade Zone').css('text-align', 'center');
+
+            setInterval(function () {
+                $('#konami').css('color','black');
+            }, 500);
+
+            setInterval(function(){
+                $('#konami').css('color','yellow');
+            }, 1000);
+
+            setInterval(function() {
+                $('#konami').css('color','white');
+            }, 1500);
         }
     });
 }
