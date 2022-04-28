@@ -410,7 +410,7 @@ console.log(daysBetweenDates(date1, date2));
 var arrayOfNumbs = [1, 2, 3, 4, 5, 6, 7]
 
 function sumArray(a, b) {
-    var sumOfNumbs = 0;
+    let sumOfNumbs = 0;
     for (let i = 0; i < a.length; i++) {
         if (a[i] > b) {
             sumOfNumbs = sumOfNumbs + a[i];
@@ -419,3 +419,14 @@ function sumArray(a, b) {
     return sumOfNumbs;
 }
 console.log(sumArray(arrayOfNumbs, 2));
+
+
+// 04/28/22 - Write a function that takes an array (a) and a value (n) as arguments:
+// Save every nth element in a new array
+// Return the new array
+// example input: [1,2,3,4,5,6,7,8,9,10],3
+// expected output: [3,6,9]
+var arrayNth = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+const everyNth = (a, nth) => a.filter((e, i) => i % nth === nth - 1);
+console.log(everyNth(arrayNth, 3));
