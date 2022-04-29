@@ -31,6 +31,10 @@ function konamiCheatCode() {
             setInterval(function() {
                 $('#konami').css('color','white');
             }, 1500);
+
+            setTimeout(function () {
+                alert("Be sure to try typing other 'cheat codes' to change the style of the page.");
+            }, 10000)
         }
     });
 }
