@@ -436,3 +436,16 @@ console.log(everyNth(arrayNth, 3));
 // Above solution can also be written as:
 const everyNthNum = (a, n) => a.filter((e, i) => i % n === n - 1);
 console.log(everyNthNum(arrayNth, 3));
+
+
+// 05/02/22 - Write a function that takes a string (a) as an argument:
+// Remove the first 3 characters of (a)
+// Return the result
+// example input:'abcdefg'
+// expected result: 'defg'
+var stringOfChars = 'abcdefg'
+
+function remove1st3Chars(a) {
+    return a.slice(3);
+}
+console.log(remove1st3Chars(stringOfChars));
