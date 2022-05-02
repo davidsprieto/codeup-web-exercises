@@ -36,7 +36,7 @@ $('li').click(function() {
     return $(this).parent().children().first().css('color', 'blue');
 });
 
-// Above solution can also be written traversing the 'ul' element's first 'li' child element.
+// Solution above can also be written traversing the 'ul' element's first 'li' child element as seen below:
 // $('ul').click(function() {
 //     return $(this).children().first().css('color', 'blue');
 // });
