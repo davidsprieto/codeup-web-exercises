@@ -249,12 +249,12 @@ for (var d = 20; d >= 0; d--) {
 // example input: {a:1,b:2,c:3}
 // expected output: ['a','b','c']
 // ------------------------
-//     example input:{j:9,i:2,x:3,z:4}
+// example input:{j:9,i:2,x:3,z:4}
 // expected output: ['j','i','x','z']
 var object1 = {a:1, b:2, c:3}
 
-function objectKeys() {
-    return Object.keys(object1);
+function objectKeys(a) {
+    return Object.keys(a);
 }
 console.log(objectKeys(object1));
 
@@ -449,3 +449,16 @@ function remove1st3Chars(a) {
     return a.slice(3);
 }
 console.log(remove1st3Chars(stringOfChars));
+
+
+// 05/03/22 - Write a function that takes an object (a) as an argument:
+// Return an array with all object keys
+// example input: {a:1,b:2,c:3}
+// expected output: ['a','b','c']
+// DUPLICATE WARMUP EXERCISE - SAME AS 04/18/22
+var objectsKeys = {a:1, b:2, c:3}
+
+function returnObjectsKeys(a) {
+    return Object.keys(a);
+}
+console.log(returnObjectsKeys(objectsKeys));
