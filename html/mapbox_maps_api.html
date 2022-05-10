@@ -17,14 +17,71 @@
 
 <!-- Custom JS Script -->
 <script>
-    mapboxgl.accessToken = 'pk.eyJ1IjoiZGF2aWRzcHJpZXRvIiwiYSI6ImNsMnFsZGtrdjAyZ28zYm9lYzNvOHVrbWYifQ.MInwhhSP2EcHcCPHsc5xYg';
+    "use strict";
+
+    var mapboxToken = 'pk.eyJ1IjoiZGF2aWRzcHJpZXRvIiwiYSI6ImNsMnFsZGtrdjAyZ28zYm9lYzNvOHVrbWYifQ.MInwhhSP2EcHcCPHsc5xYg';
+
+    mapboxgl.accessToken = mapboxToken;
     const map = new mapboxgl.Map({
         container: 'map', // container ID
         style: 'mapbox://styles/mapbox/streets-v11', // style URL
-        center: [-74.5, 40], // starting position [lng, lat]
-        zoom: 9 // starting zoom
+        center: [-87.67731, 41.91907], // starting position [lng, lat]
+        zoom: 10.5 // starting zoom
     });
 
+    // TODO: Generate a map that shows the city with your favorite restaurant using geocoding.
+    geocode("2207 N Clybourn Ave, Chicago, IL 60614", mapboxToken).then(function(result) {
+        console.log(result);
+        // map.setCenter(result); this sets the new center point after the initial map is drawn.
+        // map.setZoom(20); this sets the new zoom after the initial map is drawn.
+    });
+
+    // TODO: Can the zoom be changed programmatically after the initial map is drawn?
+    // Yes, by using .setZoom() with your specified zoom level of 0-24 being passed into the parentheses.
+
+    // TODO: Create a marker on your map of the exact location of your favorite restaurant set the zoom to allow for best viewing distance.
+    var marker = new mapboxgl.Marker().setLngLat([-87.66436, 41.92194]).addTo(map);
+
+    // TODO: Create a popup with the name of the restaurant.
+    // TODO: Make sure the info window does not display until the marker has been clicked on.
+    var pequodsPopup = new mapboxgl.Popup().setHTML("Pequod's has the best pan pizza in Chicago!");
+    marker.setPopup(pequodsPopup);
+
+    // TODO: Refactor your code to display at least three of your favorite restaurants with information about each.
+    //  TODO: Create an array of objects with information about each restaurant to accomplish this.
+    //  TODO: Use a .forEach() loop rather than a for loop.
+    var restaurants = [
+        {
+            name: "Ramen Wasabi",
+            location: "2101 N Milwaukee Ave, Chicago, IL 60647",
+            foodType: "Japanese, Soups, Noodle Dishes",
+            menu: "<a href=\https://www.wasabichicago.com/menu-1\"><b>MENU</b></a>"
+        },
+        {
+            name: "Jack & Ginger's",
+            location: "2048 W Armitage Ave, Chicago, IL 60647",
+            foodType: "American, Pub Grub",
+            menu: "<a href=\https://www.jackandgingers.com/menus/\"><b>MENU</b></a>",
+        },
+        {
+            name: "Small Cheval",
+            location: "1732 N Milwaukee Ave, Chicago, IL 60647",
+            foodType: "American, Burgers",
+            menu: "<a href=\https://smallcheval.com/wicker-park/\"><b>MENU</b></a>",
+        }
+    ];
+
+    function restaurantMarkerAndPopup() {
+        restaurants.forEach(function(restaurant) {
+            geocode(restaurant.location, mapboxToken).then(function(result) {
+                var restaurantPopup = new mapboxgl.Popup().setHTML( "<b>" + "Restaurant: " + "</b>" + restaurant.name + "<br>" + "<b>" + "Food Type: " + "</b>" + restaurant.foodType + "<br>" + restaurant.menu);
+                var restaurantMarker = new mapboxgl.Marker().setLngLat(result).addTo(map).setPopup(restaurantPopup);
+                console.log(restaurantMarker);
+            });
+        });
+    }
+
+    restaurantMarkerAndPopup(restaurants);
 
 </script>
 
