@@ -476,3 +476,10 @@ function splitDigits(a) {
     return numToArr;
 }
 console.log(splitDigits(digits));
+
+
+// 05/11/22 - From Groovy JS Assessment III:
+// Write a function named convertNameToObject that accepts a string that contains a first name and last name separated by
+// a space character, and returns an object with properties firstName and lastName.
+// convertNameToObject('Harry Potter') // {firstName: 'Harry', lastName: 'Potter'}
+// convertNameToObject('Ron Weasley') // {firstName: 'Ron', lastName: 'Weasley'}
