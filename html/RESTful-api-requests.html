@@ -10,14 +10,17 @@
 
 <div class="container">
     <div class="row">
-        <div id="movies" class="col-6 text-center">
-            <h1></h1>
+        <div id="movies" class="col-4 text-center">
+        <!--<h1></h1>-->
+        <!--<h4></h4>-->
+        <!--<img>-->
+        <!--<button></button>-->
         </div>
 
-        <form class="col-6">
+        <form class="col-4">
             <h1>Add a Movie:</h1>
-            <label for="">Movie Rating:</label>
-            <select id="">
+            <label for="rating">Movie Rating:</label>
+            <select id="rating">
                 <option>1</option>
                 <option>2</option>
                 <option>3</option>
@@ -25,9 +28,25 @@
                 <option>5</option>
             </select>
             <br>
-            <label for="">Movie Title:</label>
-            <input id="" name="" type="text">
-            <button>Submit Movie Title & Rating</button>
+            <label for="title">Movie Title:</label>
+            <input id="title" name="title" type="text">
+            <button id="add-movie">Submit Movie Title & Rating</button>
+        </form>
+
+        <form class="col-4">
+            <h1>Edit a Movie:</h1>
+            <label for="edit-rating">Movie Rating:</label>
+            <select id="edit-rating">
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+            </select>
+            <br>
+            <label for="title">Movie Title:</label>
+            <input id="edit-title" name="edit-title" type="text">
+            <button id="edit-movie">Submit Movie Title & Rating</button>
         </form>
     </div>
 </div>
