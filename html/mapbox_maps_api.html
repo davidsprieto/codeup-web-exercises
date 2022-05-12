@@ -15,13 +15,13 @@
 <!-- Mapbox Geocoder Util Methods -->
 <script rel="script" src="/js/mapbox-geocoder-utils.js"></script>
 
+<script rel="script" src="/.gitignore/keys.js"></script>
+
 <!-- Custom JS Script -->
 <script>
     "use strict";
 
-    var mapboxToken = 'pk.eyJ1IjoiZGF2aWRzcHJpZXRvIiwiYSI6ImNsMnFsZGtrdjAyZ28zYm9lYzNvOHVrbWYifQ.MInwhhSP2EcHcCPHsc5xYg';
-
-    mapboxgl.accessToken = mapboxToken;
+    mapboxgl.accessToken = mapBoxKey;
     const map = new mapboxgl.Map({
         container: 'map', // container ID
         style: 'mapbox://styles/mapbox/streets-v11', // style URL
@@ -30,7 +30,7 @@
     });
 
     // TODO: Generate a map that shows the city with your favorite restaurant using geocoding.
-    geocode("2207 N Clybourn Ave, Chicago, IL 60614", mapboxToken).then(function(result) {
+    geocode("2207 N Clybourn Ave, Chicago, IL 60614", mapBoxKey).then(function(result) {
         console.log(result);
         // map.setCenter(result); this sets the new center point after the initial map is drawn.
         // map.setZoom(20); this sets the new zoom after the initial map is drawn.
@@ -73,7 +73,7 @@
 
     function restaurantMarkerAndPopup() {
         restaurants.forEach(function(restaurant) {
-            geocode(restaurant.location, mapboxToken).then(function(result) {
+            geocode(restaurant.location, mapBoxKey).then(function(result) {
                 var restaurantPopup = new mapboxgl.Popup().setHTML( "<b>" + "Restaurant: " + "</b>" + restaurant.name + "<br>" + "<b>" + "Food Type: " + "</b>" + restaurant.foodType + "<br>" + restaurant.menu);
                 var restaurantMarker = new mapboxgl.Marker().setLngLat(result).addTo(map).setPopup(restaurantPopup);
                 console.log(restaurantMarker);
