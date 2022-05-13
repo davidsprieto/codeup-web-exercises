@@ -483,3 +483,7 @@ console.log(splitDigits(digits));
 // a space character, and returns an object with properties firstName and lastName.
 // convertNameToObject('Harry Potter') // {firstName: 'Harry', lastName: 'Potter'}
 // convertNameToObject('Ron Weasley') // {firstName: 'Ron', lastName: 'Weasley'}
+function convertNameToObject(string) {
+
+}
+console.log(convertNameToObject("Harry Potter"));
