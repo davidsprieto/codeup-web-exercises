@@ -74,6 +74,7 @@
     function restaurantMarkerAndPopup() {
         restaurants.forEach(function(restaurant) {
             geocode(restaurant.location, mapBoxKey).then(function(result) {
+                console.log(result);
                 var restaurantPopup = new mapboxgl.Popup().setHTML( "<b>" + "Restaurant: " + "</b>" + restaurant.name + "<br>" + "<b>" + "Food Type: " + "</b>" + restaurant.foodType + "<br>" + restaurant.menu);
                 var restaurantMarker = new mapboxgl.Marker().setLngLat(result).addTo(map).setPopup(restaurantPopup);
                 console.log(restaurantMarker);
