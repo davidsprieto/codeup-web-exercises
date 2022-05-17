@@ -28,9 +28,12 @@ retrieveData("Gurnee, US");
 // Display weather functions -----------//
 // Should refactor code at a later time to iterate through the data object in order to only have one function --------//
 function displayWeather0(data) {
+    let iconcode = data.daily[0].weather[0].icon;
+    let iconurl = "http://openweathermap.org/img/w/" + iconcode + ".png";
     const dayJsObject = dayjs();
     $('#date0').html('Date: ' + dayJsObject.format("M/D/YYYY"));
     $('#high-low0').html("High: " + data.daily[0].temp.max.toString() + " / Low: " + data.daily[0].temp.min.toString());
+    $('#image0').attr('src', iconurl);
     $('#description0').html("Description: " + data.daily[0].weather[0].description);
     $('#humidity0').html("Humidity: " + data.daily[0].humidity);
     $('#wind0').html("Wind Speed: " + data.daily[0].wind_speed)
@@ -38,9 +41,12 @@ function displayWeather0(data) {
 }
 
 function displayWeather1(data) {
+    let iconcode = data.daily[1].weather[0].icon;
+    let iconurl = "http://openweathermap.org/img/w/" + iconcode + ".png";
     const dayJsObject = dayjs();
     $('#date1').html('Date: ' + dayJsObject.add(1, 'day').format("M/D/YYYY"));
     $('#high-low1').html("High: " + data.daily[1].temp.max.toString() + " / Low: " + data.daily[1].temp.min.toString());
+    $('#image1').attr('src', iconurl);
     $('#description1').html("Description: " + data.daily[1].weather[0].description);
     $('#humidity1').html("Humidity: " + data.daily[1].humidity);
     $('#wind1').html("Wind Speed: " + data.daily[1].wind_speed)
@@ -48,9 +54,12 @@ function displayWeather1(data) {
 }
 
 function displayWeather2(data) {
+    let iconcode = data.daily[2].weather[0].icon;
+    let iconurl = "http://openweathermap.org/img/w/" + iconcode + ".png";
     const dayJsObject = dayjs();
     $('#date2').html('Date: ' + dayJsObject.add(2, 'day').format("M/D/YYYY"));
     $('#high-low2').html("High: " + data.daily[2].temp.max.toString() + " / Low: " + data.daily[2].temp.min.toString());
+    $('#image2').attr('src', iconurl);
     $('#description2').html("Description: " + data.daily[2].weather[0].description);
     $('#humidity2').html("Humidity: " + data.daily[2].humidity);
     $('#wind2').html("Wind Speed: " + data.daily[2].wind_speed)
@@ -58,9 +67,12 @@ function displayWeather2(data) {
 }
 
 function displayWeather3(data) {
+    let iconcode = data.daily[3].weather[0].icon;
+    let iconurl = "http://openweathermap.org/img/w/" + iconcode + ".png";
     const dayJsObject = dayjs();
     $('#date3').html('Date: ' + dayJsObject.add(3, 'day').format("M/D/YYYY"));
     $('#high-low3').html("High: " + data.daily[3].temp.max.toString() + " / Low: " + data.daily[3].temp.min.toString());
+    $('#image3').attr('src', iconurl);
     $('#description3').html("Description: " + data.daily[3].weather[0].description);
     $('#humidity3').html("Humidity: " + data.daily[3].humidity);
     $('#wind3').html("Wind Speed: " + data.daily[3].wind_speed)
@@ -68,19 +80,59 @@ function displayWeather3(data) {
 }
 
 function displayWeather4(data) {
+    let iconcode = data.daily[4].weather[0].icon;
+    let iconurl = "http://openweathermap.org/img/w/" + iconcode + ".png";
     const dayJsObject = dayjs();
     $('#date4').html('Date: ' + dayJsObject.add(4, 'day').format("M/D/YYYY"));
     $('#high-low4').html("High: " + data.daily[4].temp.max.toString() + " / Low: " + data.daily[4].temp.min.toString());
+    $('#image4').attr('src', iconurl);
     $('#description4').html("Description: " + data.daily[4].weather[0].description);
     $('#humidity4').html("Humidity: " + data.daily[4].humidity);
     $('#wind4').html("Wind Speed: " + data.daily[4].wind_speed)
     $('#pressure4').html("Pressure: " + data.daily[4].pressure);
 }
 
-// mapboxgl.accessToken = mapBoxKey;
-// const map = new mapboxgl.Map({
-//     container: 'map', // container ID
-//     style: 'mapbox://styles/mapbox/streets-v11', // style URL
-//     center: [-87.67731, 41.91907], // starting position [lng, lat]
-//     zoom: 10 // starting zoom
-// });
+// Mapbox Map API Object ------------//
+mapboxgl.accessToken = mapBoxKey;
+const map = new mapboxgl.Map({
+    container: 'map', // container ID
+    style: 'mapbox://styles/mapbox/streets-v11', // style URL
+    center: [longitude, latitude], // starting position [lng, lat]
+    zoom: 10 // starting zoom
+});
+
+// Mapbox Map API Navigation Controls ------------//
+map.addControl(new mapboxgl.NavigationControl());
+
+// Mapbox Map API Marker ----------------//
+let marker = new mapboxgl.Marker({
+    draggable: true
+})
+    .setLngLat([longitude, latitude])
+    .addTo(map);
+
+// Functionality to draggable marker ----------//
+function draggable() {
+    let lngLat = marker.getLngLat();
+    longitude = lngLat.lng;
+    latitude = lngLat.lat;
+    retrieveData();
+}
+marker.on('dragend', draggable);
+
+// City search input function to display the 5-day weather forecast, drop a marker, and center (flyTo) the map on the searched city ------//
+$(".btn").click(function (e) {
+    e.preventDefault()
+    let searchInput = $("#input").val();
+    geocode(searchInput, mapBoxKey).then(function(data) {
+        console.log(data);
+        latitude = data[1];
+        longitude = data[0];
+        let marker = new mapboxgl.Marker().setLngLat([longitude, latitude]).addTo(map);
+        console.log(marker);
+        map.flyTo({center:[longitude, latitude]})
+        retrieveData();
+
+    })
+
+})
