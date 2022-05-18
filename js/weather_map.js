@@ -106,9 +106,7 @@ map.addControl(new mapboxgl.NavigationControl());
 // Mapbox Map API Marker ----------------//
 let marker = new mapboxgl.Marker({
     draggable: true
-})
-    .setLngLat([longitude, latitude])
-    .addTo(map);
+}).setLngLat([longitude, latitude]).addTo(map);
 
 // Functionality to draggable marker ----------//
 function draggable() {
@@ -127,9 +125,11 @@ $(".btn").click(function (e) {
         console.log(data);
         latitude = data[1];
         longitude = data[0];
+
         let marker = new mapboxgl.Marker().setLngLat([longitude, latitude]).addTo(map);
         console.log(marker);
         map.flyTo({center:[longitude, latitude]})
+
         retrieveData();
 
     })
