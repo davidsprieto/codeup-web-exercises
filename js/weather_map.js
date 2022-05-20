@@ -28,7 +28,7 @@ retrieveData("Gurnee, US");
 // Display weather functions -----------//
 function displayWeather0(data) {
     let iconCode = data.daily[0].weather[0].icon;
-    let iconUrl = "http://openweathermap.org/img/w/" + iconCode + ".png";
+    let iconUrl = "https://openweathermap.org/img/w/" + iconCode + ".png";
     const dayJsObject = dayjs();
     $('#date0').html('Date: ' + dayJsObject.format("M/D/YYYY"));
     $('#high-low0').html("High: " + data.daily[0].temp.max.toString() + " / Low: " + data.daily[0].temp.min.toString());
@@ -41,7 +41,7 @@ function displayWeather0(data) {
 
 function displayWeather1(data) {
     let iconCode = data.daily[1].weather[0].icon;
-    let iconUrl = "http://openweathermap.org/img/w/" + iconCode + ".png";
+    let iconUrl = "https://openweathermap.org/img/w/" + iconCode + ".png";
     const dayJsObject = dayjs();
     $('#date1').html('Date: ' + dayJsObject.add(1, 'day').format("M/D/YYYY"));
     $('#high-low1').html("High: " + data.daily[1].temp.max.toString() + " / Low: " + data.daily[1].temp.min.toString());
@@ -54,7 +54,7 @@ function displayWeather1(data) {
 
 function displayWeather2(data) {
     let iconCode = data.daily[2].weather[0].icon;
-    let iconUrl = "http://openweathermap.org/img/w/" + iconCode + ".png";
+    let iconUrl = "https://openweathermap.org/img/w/" + iconCode + ".png";
     const dayJsObject = dayjs();
     $('#date2').html('Date: ' + dayJsObject.add(2, 'day').format("M/D/YYYY"));
     $('#high-low2').html("High: " + data.daily[2].temp.max.toString() + " / Low: " + data.daily[2].temp.min.toString());
@@ -67,7 +67,7 @@ function displayWeather2(data) {
 
 function displayWeather3(data) {
     let iconCode = data.daily[3].weather[0].icon;
-    let iconUrl = "http://openweathermap.org/img/w/" + iconCode + ".png";
+    let iconUrl = "https://openweathermap.org/img/w/" + iconCode + ".png";
     const dayJsObject = dayjs();
     $('#date3').html('Date: ' + dayJsObject.add(3, 'day').format("M/D/YYYY"));
     $('#high-low3').html("High: " + data.daily[3].temp.max.toString() + " / Low: " + data.daily[3].temp.min.toString());
@@ -80,7 +80,7 @@ function displayWeather3(data) {
 
 function displayWeather4(data) {
     let iconCode = data.daily[4].weather[0].icon;
-    let iconUrl = "http://openweathermap.org/img/w/" + iconCode + ".png";
+    let iconUrl = "https://openweathermap.org/img/w/" + iconCode + ".png";
     const dayJsObject = dayjs();
     $('#date4').html('Date: ' + dayJsObject.add(4, 'day').format("M/D/YYYY"));
     $('#high-low4').html("High: " + data.daily[4].temp.max.toString() + " / Low: " + data.daily[4].temp.min.toString());

@@ -458,8 +458,8 @@ console.log(remove1st3Chars(stringOfChars));
 // DUPLICATE WARMUP EXERCISE - SAME AS 04/18/22
 var objectsKeys = {a:1, b:2, c:3}
 
-function returnObjectsKeys(a) {
-    return Object.keys(a);
+function returnObjectsKeys(obj) {
+    return Object.keys(obj);
 }
 console.log(returnObjectsKeys(objectsKeys));
 
@@ -484,6 +484,10 @@ console.log(splitDigits(digits));
 // convertNameToObject('Harry Potter') // {firstName: 'Harry', lastName: 'Potter'}
 // convertNameToObject('Ron Weasley') // {firstName: 'Ron', lastName: 'Weasley'}
 function convertNameToObject(string) {
-
+    const [firstName, lastName] = string.split(" ");
+    let obj = {};
+    obj.firstName = firstName;
+    obj.lastName = lastName;
+    return obj;
 }
-console.log(convertNameToObject("Harry Potter"));
+console.log(convertNameToObject("Ron Weasley"));
