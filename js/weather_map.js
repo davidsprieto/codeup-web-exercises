@@ -126,12 +126,10 @@ $(".btn").click(function (e) {
         latitude = data[1];
         longitude = data[0];
 
-        let marker = new mapboxgl.Marker().setLngLat([longitude, latitude]).addTo(map);
-        console.log(marker);
-        map.flyTo({center:[longitude, latitude]})
-
+        marker = new mapboxgl.Marker({draggable: true}).setLngLat([longitude, latitude]).addTo(map);
+        map.flyTo({center:[longitude, latitude]});
         retrieveData();
 
+        marker.on('dragend', draggable);
     })
-
 })
