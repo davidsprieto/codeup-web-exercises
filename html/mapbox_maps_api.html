@@ -71,7 +71,7 @@
         }
     ];
 
-    function restaurantMarkerAndPopup() {
+    function restaurantMarkerAndPopup(restaurants) {
         restaurants.forEach(function(restaurant) {
             geocode(restaurant.location, mapBoxKey).then(function(result) {
                 console.log(result);
