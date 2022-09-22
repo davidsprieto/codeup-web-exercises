@@ -1,7 +1,7 @@
 "use strict"
 
 function renderCoffee(coffee) {
-    var html = '<div id="coffees" class="coffee">';
+    let html = '<div id="coffees" class="coffee">';
     html += '<span class="badge badge-warning">' + '#' + coffee.id + ":" + '</span>';
     html += '<h1>' + coffee.name + '</h1>';
     html += '<p>' + coffee.roast + '</p>';
@@ -11,16 +11,16 @@ function renderCoffee(coffee) {
 }
 
 function renderCoffees(coffees) {
-    var html = '';
-    for(var i = coffees.length - 1; i >= 0; i--) {
+    let html = '';
+    for(let i = coffees.length - 1; i >= 0; i--) {
         html += renderCoffee(coffees[i]);
     }
     return html;
 }
 
 function updateCoffeesByRoast() {
-    var selectedRoast = roastSelection.value;
-    var filteredCoffeeRoasts = [];
+    let selectedRoast = roastSelection.value;
+    let filteredCoffeeRoasts = [];
     coffees.forEach(function(coffee) {
         if (coffee.roast === selectedRoast) {
             filteredCoffeeRoasts.push(coffee);
@@ -32,8 +32,8 @@ function updateCoffeesByRoast() {
 }
 
 function updateCoffeesByName() {
-    var selectedCoffee = coffeeSearch.value;
-    var filteredCoffeeNames = [];
+    let selectedCoffee = coffeeSearch.value;
+    let filteredCoffeeNames = [];
     coffees.forEach(function(coffee) {
         if (coffee.name === selectedCoffee || coffee.name.startsWith(selectedCoffee) || coffeeSearch.value.toLowerCase() === coffee.name.toLowerCase() || coffee.name.toLowerCase().startsWith(selectedCoffee.toLowerCase()) || coffee.name.includes(selectedCoffee) || coffee.name.toLowerCase().includes(selectedCoffee.toLowerCase())) {
             filteredCoffeeNames.push(coffee);
@@ -44,7 +44,7 @@ function updateCoffeesByName() {
 
 function addACoffee(e) {
     e.preventDefault(); // don't submit the form, we just want to update the data
-    var newCoffee = {
+    let newCoffee = {
         id: coffees.length + 1,
         name: document.getElementById('new-coffee-selection').value,
         roast: document.getElementById('new-roast-selection').value
@@ -58,7 +58,7 @@ function addACoffee(e) {
 }
 
 // from http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
-var coffees = [
+let coffees = [
     {id: 1, name: 'Light City', roast: 'Light'},
     {id: 2, name: 'Half City', roast: 'Light'},
     {id: 3, name: 'Cinnamon', roast: 'Light'},
@@ -79,10 +79,10 @@ coffees.sort((a, b) => {
     return (b.id - a.id);
 });
 
-var bodyMainDiv = document.querySelector('#coffees');
-var submitButton = document.querySelector('#submit');
-var roastSelection = document.querySelector('#roast-selection');
-var coffeeSearch = document.querySelector('#coffee-selection');
+let bodyMainDiv = document.querySelector('#coffees');
+let submitButton = document.querySelector('#submit');
+let roastSelection = document.querySelector('#roast-selection');
+let coffeeSearch = document.querySelector('#coffee-selection');
 
 bodyMainDiv.innerHTML = renderCoffees(coffees);
 
