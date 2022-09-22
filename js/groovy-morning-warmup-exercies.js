@@ -115,7 +115,7 @@ function sumArr(array) {
         return "Sum not available";
     } else {
         array = array.filter(value => typeof value === 'number');
-        return array.reduce((a, b) => a + b, 0 );
+        return array.reduce((a, b) => a + b, 0);
     }
 }
 console.log(sumArr(arrayOfChar));
@@ -469,10 +469,10 @@ console.log(returnObjectsKeys(objectsKeys));
 // Tip: you might want to change the type of the number for the splitting
 // example input: 931
 // expected output: [9,3,1]
-var digits = 931;
+let digits = 931;
 
 function splitDigits(a) {
-    var numToArr = Array.from(String(a), Number);
+    let numToArr = Array.from(String(a), Number);
     return numToArr;
 }
 console.log(splitDigits(digits));
