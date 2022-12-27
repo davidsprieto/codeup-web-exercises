@@ -494,27 +494,45 @@
 //
 //
 // 12/22/22 - From CodeSignal
-let matrix = [[1, 1, 1, 0],
-            [0, 5, 0, 1],
-            [2, 1, 3, 10]];
+// let matrix = [[1, 1, 1, 0],
+//             [0, 5, 0, 1],
+//             [2, 1, 3, 10]];
+//
+// let matrixTwo = [[4,0,1],
+//                 [10,7,0],
+//                 [0,0,0],
+//                 [9,1,2]];
+//
+// function solution(matrix) {
+//     let sum = 0;
+//
+//     for (let i = 0; i < matrix[0].length; i++) {
+//         for (let j = 0; j < matrix.length; j++) {
+//             if (matrix[j][i] === 0) {
+//                 break;
+//             }
+//             sum += matrix[j][i];
+//         }
+//     }
+//     return sum;
+// }
+//
+// console.log(solution(matrixTwo));
+//
+//
+// 12/27/23 - From CodeSignal
+let s1 = "aabcc";
+let s2 = "adcaa";
 
-let matrixTwo = [[4,0,1],
-                [10,7,0],
-                [0,0,0],
-                [9,1,2]];
-
-function solution(matrix) {
-    let sum = 0;
-
-    for (let i = 0; i < matrix[0].length; i++) {
-        for (let j = 0; j < matrix.length; j++) {
-            if (matrix[j][i] === 0) {
-                break;
-            }
-            sum += matrix[j][i];
+function solution(s1, s2) {
+    let count = 0;
+    for (let i = 0; i < s1.length; i++) {
+        if (s2.indexOf(s1[i]) !== -1) {
+            count++;
+            s2 = s2.replace(s1[i], '');
         }
     }
-    return sum;
+    return count;
 }
 
-console.log(solution(matrixTwo));
+console.log(solution(s1, s2));
