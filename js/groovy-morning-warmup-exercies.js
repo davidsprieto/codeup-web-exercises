@@ -521,18 +521,38 @@
 //
 //
 // 12/27/23 - From CodeSignal
-let s1 = "aabcc";
-let s2 = "adcaa";
-
-function solution(s1, s2) {
-    let count = 0;
-    for (let i = 0; i < s1.length; i++) {
-        if (s2.indexOf(s1[i]) !== -1) {
-            count++;
-            s2 = s2.replace(s1[i], '');
-        }
-    }
-    return count;
-}
-
-console.log(solution(s1, s2));
+// let s1 = "aabcc";
+// let s2 = "adcaa";
+//
+// function solution(s1, s2) {
+//     let count = 0;
+//     for (let i = 0; i < s1.length; i++) {
+//         if (s2.indexOf(s1[i]) !== -1) {
+//             count++;
+//             s2 = s2.replace(s1[i], '');
+//         }
+//     }
+//     return count;
+// }
+//
+// console.log(solution(s1, s2));
+//
+//
+// 12/28/22 - From CodeSignal (isLucky)
+// let n = 239017;
+//
+// function solution(n) {
+//     let firstHalfSum = 0;
+//     let secondHalfSum = 0;
+//     let digitArray = Array.from(String(n), Number);
+//
+//     for (let i = 0; i < Math.floor(digitArray.length / 2); i++) {
+//         firstHalfSum += digitArray[i];
+//     }
+//     for (let i = Math.floor(digitArray.length / 2); i < digitArray.length; i++) {
+//         secondHalfSum += digitArray[i];
+//     }
+//     return firstHalfSum === secondHalfSum;
+// }
+//
+// console.log(solution(n));
