@@ -572,3 +572,19 @@
 // }
 //
 // console.log(solution(a));
+//
+//
+// 01/08/2023 - Leetcode 1480. Running Sum of 1D Array:
+//
+// let nums = [1, 2, 3, 4];
+//
+// const runningSum = (nums) => {
+//     for (let i = nums.length - 1; i >= 0; i--) {
+//         for (let j = 0; j < i; j++) {
+//             nums[i] += nums[j];
+//         }
+//     }
+//     return nums;
+// }
+//
+// console.log(runningSum(nums));
