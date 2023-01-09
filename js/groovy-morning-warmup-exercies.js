@@ -588,3 +588,37 @@
 // }
 //
 // console.log(runningSum(nums));
+//
+//
+// 01/09/2023 - Leetcode 724. Find Pivot Index:
+
+let nums = [-1, -1, 0, 0, -1, -1];
+
+const pivotIndex = (nums) => {
+    let counting = true;
+    let index = 0;
+
+    while (counting) {
+        let leftSum = 0;
+        let rightSum = 0;
+
+        for (let j = 0; j < index; j++) {
+            leftSum += nums[j];
+        }
+
+        for (let i = nums.length - 1; i > index; i--) {
+            rightSum += nums[i];
+        }
+
+        if (leftSum === rightSum) {
+            return index;
+        }
+
+        if (index === nums.length - 1) {
+            return -1;
+        }
+        index++;
+    }
+}
+
+console.log(pivotIndex(nums));

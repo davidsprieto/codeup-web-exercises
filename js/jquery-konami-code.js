@@ -6,11 +6,11 @@
 
 
 function konamiCheatCode() {
-    var konamiKeys = '3838404037393739666513';
-    var userTyping = '';
+    let konamiKeys = '3838404037393739666513';
+    let userTyping = '';
     $(document).keyup(function(event) {
         console.log(event.keyCode);
-        userTyping = userTyping + ('' + event.keyCode);
+        userTyping += ('' + event.keyCode);
         if (userTyping === konamiKeys) {
             alert('You have unlocked 30 lives!');
             $('body').css({
