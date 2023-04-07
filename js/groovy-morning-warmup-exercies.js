@@ -572,23 +572,3 @@
 // }
 //
 // console.log(solution(a));
-
-
-// 04/07/2023 - TODO: Return value from an array at a random index
-let restaurants = ['Harbor Kitchen and Tap', 'The Shanty', 'Woodfire Tavern', 'Park Street', 'Shakou'];
-
-const shuffle = (input) => {
-  return input.sort(() => Math.random() - 0.5);
-}
-
-const random = () => {
-  return Math.floor(Math.random() * 5);
-}
-
-const choose = (input) => {
-  let shuffled = shuffle(input);
-  let randomNumber = random();
-  return shuffled[randomNumber];
-}
-
-choose(restaurants);
